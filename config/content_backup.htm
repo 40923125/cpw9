@@ -1,6 +1,7 @@
 <h1>About</h1>
 <p></p>
-<p>這個倉儲位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 是一個能夠與 Github Pages, Gitlab Pages 以及 Heroku 結合的網際內容管理系統.</p><h1>Hint</h1>
+<p>這個倉儲位於 <a href="https://github.com/mdecourse/cmstemplate">https://github.com/mdecourse/cmstemplate</a> 是一個能夠與 Github Pages, Gitlab Pages 以及 Heroku 結合的網際內容管理系統.</p>
+<h1>Hint</h1>
 <ol>
 <li>是否了解如何設定 Github Pages?</li>
 <li>是否了解如何設定 Gitlab Pages?</li>
@@ -22,7 +23,8 @@
 <ol>
 <li>著手利用 Python 解決各類問題</li>
 <li>利用 Python 修改 Solidworks 與 Inventor 零件尺寸</li>
-</ol><h2>gitlab-ci.yml</h2>
+</ol>
+<h2>gitlab-ci.yml</h2>
 <p>標題不能使用 .gitlab-ci.yml 因為轉為 content/.gitlab-ci.yml 時, 無法從 content/.github-ci.yml 呼叫.</p>
 <p>.gitlab-ci.yml 是在 Gitlab Pages 設定過程中將靜態網頁轉存並伺服的 continuout integration 設定檔案.</p>
 <pre class="brush:js;auto-links:false;toolbar:false" contenteditable="false">pages:
@@ -37,7 +39,8 @@
   only:
   - master
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive</pre><h1>CMSiMDE</h1>
+  GIT_SUBMODULE_STRATEGY: recursive</pre>
+<h1>CMSiMDE</h1>
 <p>網際內容管理系統</p>
 <p>Web-based Content Management System</p>
 <p><a href="https://learnmech.com/">https://learnmech.com/</a></p>
@@ -45,23 +48,88 @@ variables:
 <p><a href="https://imechanica.org/">https://imechanica.org/</a> </p>
 <p><a href="https://info.traceparts.com/use-and-manage-3d-cad-models/download-free-cad-models/">https://info.traceparts.com/use-and-manage-3d-cad-models/download-free-cad-models/</a> </p>
 <p><a href="https://bookboon.com/en">https://bookboon.com/en</a> </p>
-<p></p><h2>CMSiMDE 程式架構</h2>
+<p></p>
+<h2>CMSiMDE 程式架構</h2>
 <p>動態網頁的主要檔案為 config/content.htm</p>
 <p>當使用者在命令列中將目錄更換到 cmsimde, 然後以 python wsgi.py 執行 wsgi.py 程式時, 其實 Python 程式是仰賴 Flask 網際框架結構來進行資料伺服.</p>
-<p>CMSiMDE 的作動需要 Flask 網際框架, 需要 bs4 與 lxml 進行 content.htm 的頁面解讀, 透過超文件檔案中的 h1, h2 與 h3 由上到下執行循序式分頁, 之後再透過 Javascript 與 css 將 h1, h2, h3 依照樹狀結構, h1 標題為第一階, h2 為第二階, h3 為第三階.</p><h3>為何需要網際內容管理</h3>
-<p>全球資訊網無遠弗屆, 而且 WWW 的伺服架構相對於手機 APP 對於使用者而言更加友善, 除了允許多重身分無需實名綁定之外, 可以讓工程師進行各種協同設計, 因此若能廣泛利用網際環境建立各種應用程式環境, 將有助提升設計效益.</p><h3>如何建立 CMSiMDE 子模組</h3>
+<p>CMSiMDE 的作動需要 Flask 網際框架, 需要 bs4 與 lxml 進行 content.htm 的頁面解讀, 透過超文件檔案中的 h1, h2 與 h3 由上到下執行循序式分頁, 之後再透過 Javascript 與 css 將 h1, h2, h3 依照樹狀結構, h1 標題為第一階, h2 為第二階, h3 為第三階.</p>
+<h3>為何需要網際內容管理</h3>
+<p>全球資訊網無遠弗屆, 而且 WWW 的伺服架構相對於手機 APP 對於使用者而言更加友善, 除了允許多重身分無需實名綁定之外, 可以讓工程師進行各種協同設計, 因此若能廣泛利用網際環境建立各種應用程式環境, 將有助提升設計效益.</p>
+<h3>如何建立 CMSiMDE 子模組</h3>
 <p>git submodule add <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a> cmsimde</p>
-<p>表示要透過 git submodule add 將 <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a> 遠端倉儲當作子模組, 而且將資料存入子目錄 cmsimde 中.</p><h3>為何需要以子模組的設計</h3>
-<p>在一個倉儲中帶有子模組的用意是善用分散式設計的做法, 子模組代表一個非由倉儲管理者維護權限所及的單位模組. 意即, 倉儲中程式的執行需要子模組中的資料, 但是倉儲擁有者將子模組視為獨立元件, 並不需要對子模組的內容進行改版. 一旦子模組原始倉儲資料更新, 採用子模組的各倉儲所有者可以決定是否配合跟進, 若不跟進仍有使用既有版本的子模組繼續運作, 原始子模組與採用不同版本子模組的倉儲都不會彼此受到影響.</p><h3>兩種不同的 git clone</h3>
+<p>表示要透過 git submodule add 將 <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a> 遠端倉儲當作子模組, 而且將資料存入子目錄 cmsimde 中.</p>
+<h3>為何需要以子模組的設計</h3>
+<p>在一個倉儲中帶有子模組的用意是善用分散式設計的做法, 子模組代表一個非由倉儲管理者維護權限所及的單位模組. 意即, 倉儲中程式的執行需要子模組中的資料, 但是倉儲擁有者將子模組視為獨立元件, 並不需要對子模組的內容進行改版. 一旦子模組原始倉儲資料更新, 採用子模組的各倉儲所有者可以決定是否配合跟進, 若不跟進仍有使用既有版本的子模組繼續運作, 原始子模組與採用不同版本子模組的倉儲都不會彼此受到影響.</p>
+<h3>兩種不同的 git clone</h3>
 <p>git clone <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a></p>
 <p>表示要將 cmsimde 倉儲的資料 clone 到近端, 針對沒有子模組設置的倉儲可以直接以 git clone 取下倉儲資料</p>
 <p>git clone --recurse-submodules <a href="https://github.com/mdecourse/cp2020.git">https://github.com/mdecourse/cp2020.git</a></p>
-<p>表示要將 cp2020 倉儲中包含個子模組與可能子模組中的子模組等資料, 全部 clone 到近端.</p><h3>假如 CMSiMDE 不設為子模組</h3>
-<p>其實各用戶若希望自行維護 CMSiMDE 網際內容管理系統, 可以直接取下 CMSiMDE 程式資料, 然後將倉儲資料放在 cmsimde 子目錄中, 並將 up_dir 中的資料複製一份到倉儲根目錄, 如此就可以依 CMSiMDE 的用法使用動態與靜態網頁.</p><h3>為何需要有動態網頁與靜態網頁</h3>
+<p>表示要將 cp2020 倉儲中包含個子模組與可能子模組中的子模組等資料, 全部 clone 到近端.</p>
+<h3>假如 CMSiMDE 不設為子模組</h3>
+<p>其實各用戶若希望自行維護 CMSiMDE 網際內容管理系統, 可以直接取下 CMSiMDE 程式資料, 然後將倉儲資料放在 cmsimde 子目錄中, 並將 up_dir 中的資料複製一份到倉儲根目錄, 如此就可以依 CMSiMDE 的用法使用動態與靜態網頁.</p>
+<h3>為何需要有動態網頁與靜態網頁</h3>
 <p>所謂的動態網頁指的是有登入系統配置的網際內容管理系統, 當使用者登入後進行內容管理, 網站會馬上呈現新版本內容, 通常無需進行網頁轉換.</p>
 <p>所謂的靜態網頁則指網站通常沒有登入系統的配置, 而且通常只包含 html 與 Javascript 資料, 由於沒有登入系統, 因此沒有內容被駭的問題, 除非負責伺服超文件網頁的系統遭駭.</p>
-<p>而 CMSiMDE 的動態網頁用於編輯網站內容, 而靜態網頁則可以利用 Github Pages, Gitlab Pages 與 Heroku 進行伺服.</p><h3>CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果</h3>
+<p>而 CMSiMDE 的動態網頁用於編輯網站內容, 而靜態網頁則可以利用 Github Pages, Gitlab Pages 與 Heroku 進行伺服.</p>
+<h3>CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果</h3>
 <p>假如在上列頁面標題中加上兩個 "?", 上面這個標題就無法順利分頁, 但是利用 SciTE 編輯 config/content.htm 之後將兩個 "?" 刪除後則可以正確完成分頁.</p>
 <p>上面的標題字元數超過 80 個, 雖可正常分頁但是在資料展示上就顯得不很方便.</p>
 <p>CMSiMDE 標題不能使用 ":" 的原因在於 Windows 操作系統不允許檔案名稱中有 ":", 因此當 CMSiMDE 動態轉靜態時必須以頁面標題作為該頁的檔案名稱, 而無法完成靜態頁面存檔的問題會讓 CMSiMDE 無法順利將動態資料轉為靜態資料.</p>
+<h1>作業</h1>
+<h2>HW1</h2>
+<h3>pch8第73〜75頁</h3>
+<h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">電腦冷卻</span></span></span></span></span></span></h4>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">1.主動風冷：</span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">主動空氣冷卻組件由風扇和鋁或銅製成的冷卻板（散熱器）組成。</span></span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">風扇將新鮮空氣吹到放置在需要冷卻的組件上方的散熱器上。</span></span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">散熱器的散熱片增加了金屬板的表面，並增加了組件的熱交換能力。</span></span></span></span></span></span></span></p>
+<p style="text-align: left;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">優：</span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">風扇在這些散熱片之間吹動空氣，從而使熱交換重啟。</span></span></span></span></span></span></span></p>
+<p style="text-align: left;"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">    可以快速去除散熱片之間產生的熱空氣。</span></span></span></span></span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">缺：產生</span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">微量的零件永遠無法冷卻到室溫以下。</span></span></span></span></span></span></span></p>
+<p><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">2.</span></span></span></span></span></span></span><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">被動風冷：被動主動空氣冷卻方法，被動空氣冷卻使用散熱器來產生接合的組件冷卻表面。</span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">不過，區別在於散熱器的大小，因為被動空氣冷卻僅依賴散熱片的大小來減少熱量。</span></span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">優：被動式空氣冷卻是最有效的冷卻方式，因為它不使用任何電源進行操作。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">缺：散熱片必須足夠大，而且它們之間還必須具有足夠的空間，才能可以實現自然的空氣流動。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">      散熱器會很重。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">3.</span></span></span></span></span></span></span></span><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">液體冷卻：液體冷卻利用了熱力學的基本原理，即轉變從較熱的物體轉移到較冷的</span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">物體</span></span></span></span></span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">。通過</span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">較冷的物體變熱，較熱的物體變冷。</span></span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">優：被水冷卻的組件比起空氣傳遞更多的位移。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">    不受環境溫度的影響。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">    噪音水平相對低。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">缺：液體冷卻複雜，成本高。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">內部組件：</span></span></span></span></span></span></span></span></p>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="color: #ff0000;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">散熱器</span></span></span></span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">：散熱器通過使用冷卻風扇有效地冷卻液體，將吸收的轉換轉移到周圍環境中。散熱器上方，散熱器越有效，從而導致其液體溫度和替代組件溫度。</span></span></span></span></span></span></p>
+<p id="N10710" lang=""><span class="term" lang="" style="color: #ff0000;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">水塊</span></span></span></span></span></span></span><span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">：水塊（或散熱器）從吸收吸收轉化。</span></span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">它包含微翅片，這些微翅片用於增加尺寸並實現更佳的熱傳遞。</span></span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">當液體流過水塊時，其吸收波長。</span></span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">如果您使用更有效的阻水劑，則組件的整體溫度將會降低。</span></span></span></span></span></span></span></span></p>
+<p id="N10715" lang=""><span class="term" lang="" style="color: #ff0000;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">水泵</span></span></span></span></span></span></span><span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">：水泵提供冷卻迴路中從熱側到冷側的液體循環。</span></span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">這允許在整個迴路中進行有效的熱傳遞。</span></span></span></span></span></span></span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">沒有良好的水泵，液體將滯留在迴路中，並且不會發生熱傳遞。</span></span></span></span></span></span></span></span></p>
+<p id="N1071A" lang=""><span class="term" lang="" style="color: #ff0000;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">儲</span></span></span></span></span></span></span><span><span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">：儲存器單元允許初始液體冷卻安裝後容易除去空氣</span></span></span></span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">，並作為在溫度波動的冷卻的膨脹區域</span></span></span></span></span><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">。</span></span></span></span></span></span></span></span></p>
+<p><span title="快速向上滾動"><span><img alt="該系統具有三個利用輸送液體的管子。" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH08/webcontent/PCH08/image3.png"/></span></span></p>
+<p><span title="快速向上滾動"><span>液體冷卻安裝:</span></span></p>
+<p><span title="快速向上滾動"><span>1.關閉計算機電源並拔下電源插頭</span></span></p>
+<p><span title="快速向上滾動"><span>2.打開機箱</span></span></p>
+<p><span title="快速向上滾動"><span>3.安裝處理器</span></span></p>
+<p><span title="快速向上滾動"><span>4.清潔CPU和水塊，清除灰塵和碎屑</span></span></p>
+<p><span title="快速向上滾動"><span>5.使用導熱膏</span></span></p>
+<p><span title="快速向上滾動"><span>6.水冷塊代替傳統的散熱器</span></span></p>
+<p><span title="快速向上滾動"><span>   散熱器代替後箱風扇 </span></span></p>
+<p><span title="快速向上滾動"><span>7.散熱器連接到水箱</span></span></p>
+<p><span title="快速向上滾動"><span>8.重新連接電源</span></span></p>
+<p><span title="快速向上滾動"><span>9.打開計算機電源，並確保液體冷卻系統正常運行</span></span></p>
+<p><span title="快速向上滾動"><span>10.關閉外殼</span></span></p>
+<h4><span title="快速向上滾動"><span>CPU安裝步驟:</span></span></h4>
+<p><span title="快速向上滾動"><span>1.將CPU安裝到主板的處理器插槽中。</span></span></p>
+<p><span title="快速向上滾動"><span>2.清潔CPU頂部和散熱器表面。</span></span></p>
+<p><span title="快速向上滾動"><span>3.在CPU和散熱器的表面塗上導熱膏。</span></span></p>
+<p><span title="快速向上滾動"><span>4.將散熱器安裝到處理器上。</span></span></p>
+<p><span title="快速向上滾動"><span>5.將冷卻風扇連接到散熱器的頂部。</span></span></p>
+<p><span title="快速向上滾動"><span>6.確保風扇已通電。</span></span></p>
+<p><span title="快速向上滾動"><span>7.每六個月清潔一次風扇葉片和散熱器的灰塵。</span></span></p>
+<h4>機箱風扇</h4>
+<p id="N106DB" lang=""><span><span>機箱風扇對於消除計算機組件（尤其是視頻卡和CPU）產生的所有熱空氣是不可避免的。</span><span>必須排出熱空氣，用冷空氣代替。</span><span>通常會發現較冷的空氣靠近地面，因為熱量會上升，因此大多數情況下都設計成冷空氣被前殼風扇從底部吸入系統</span><span>，空氣從CPU附近的機箱後部以及圖形處理單元附近的機箱側面排出。</span></span></p>
+<p lang=""><span><span>例:</span></span></p>
+<p lang=""><span><span>此為常見配置</span></span></p>
+<p id="N106E5" lang=""><span><span>機箱底部前部靠近驅動器托架（進氣口）的1個風扇。</span></span></p>
+<p id="N106E8" lang=""><span><span>機箱後部頂部，CPU上方（排氣口之後）和上方的1個風扇。</span></span></p>
+<p id="N106EB" lang=""><span><span>機箱側面有1個風扇，與GPU相對（進氣）。</span></span></p>
+<p id="N106EE" lang=""><span><span>此設置將空氣從前部吸入，通過驅動器托架將其引導到視頻卡周圍，然後從排氣風扇中排出。</span><span>側風扇將空氣直接壓到最熱的組件（GPU）上，然後由前風扇向上推動，並從後部排氣風扇中導出。</span></span></p>
+<p>    <img alt="移動機箱風扇的照片。 該視圖位於計算機內部，電纜和連接器也可見。" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH08/webcontent/PCH08/image4.png"/></p>
+<p>安裝步驟:</p>
+<p>1.<span>確保已關閉PC的電源。</span></p>
+<p>2.<span>使用十字螺絲刀安裝機箱風扇。</span></p>
+<p>3.<span>將風扇連接到未使用的風扇接頭連接器上，為風扇供電。</span></p>
+<p>4.整理電纜線。</p>
 <p></p>
