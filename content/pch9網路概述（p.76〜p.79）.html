@@ -1,0 +1,231 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923125 cp2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923125 cp2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Hint.html'>Hint</a><ul class='dropdown'><li><a href='gitlab-ci.yml.html'>gitlab-ci.yml</a></li></ul><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li class='has-children'><a href='CMSiMDE 程式架構.html'>CMSiMDE 程式架構</a><ul class='dropdown'><li><a href='為何需要網際內容管理.html'>為何需要網際內容管理</a><li><a href='如何建立 CMSiMDE 子模組.html'>如何建立 CMSiMDE 子模組</a><li><a href='為何需要以子模組的設計.html'>為何需要以子模組的設計</a><li><a href='兩種不同的 git clone.html'>兩種不同的 git clone</a><li><a href='假如 CMSiMDE 不設為子模組.html'>假如 CMSiMDE 不設為子模組</a><li><a href='為何需要有動態網頁與靜態網頁.html'>為何需要有動態網頁與靜態網頁</a><li><a href='CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果.html'>CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果</a></li></li></ul></ul><li class='has-children'><a href='作業.html'>作業</a><ul class='dropdown'><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='pch8冷卻 (p.73〜p.75).html'>pch8冷卻 (p.73〜p.75)</a><li><a href='pch9網路概述（p.76〜p.79）.html'>pch9網路概述（p.76〜p.79）</a><li><a href='pch10網路設備 (p.80~p.82).html'>pch10網路設備 (p.80~p.82)</a><li><a href='pch11網路媒體 (p.83 p.84).html'>pch11網路媒體 (p.83 p.84)</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">pch8冷卻 (p.73〜p.75) << <a href='pch8冷卻 (p.73〜p.75).html'>Previous</a> <a href='pch10網路設備 (p.80~p.82).html'>Next</a> >> pch10網路設備 (p.80~p.82)<br /><h1>pch9網路概述（p.76〜p.79）</h1>
+<p><strong>地理位置定義的網路</strong></p>
+<p>網絡由其所覆蓋的地理位置定義。一個人周圍的區域開始，將區域稱為<span style="color: #ff0000;">個人區域網絡（PAN）</span>。接下來，我們將擴展擴展到相連<span style="color: #ff0000;">局域網（LAN）</span>，該替換可以包含整個辦公場所或建築物。再次擴展移動，我們有了<span style="color: #ff0000;">城域網(MAN)</span>，該城域網通過將多個<span>LAN</span>連接在一起而覆蓋了整個城市。最後，我們有<span style="color: #ff0000;">廣域網（WAN）</span>。這是我們按定位定義的最大網絡，它可以遍及全國，甚至遍及全球。廣域網就是一個很好的例子，因為互聯網將許多網絡連接在一起並遍及全球。</p>
+<p>地理網路示意圖：</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image1.png"/></p>
+<p>個人區域網<span style="color: #ff0000;">（PAN</span>）</p>
+<p>PAN的範圍很小，大約將<span style="color: #ff0000;">雙手伸向兩側並轉一圈</span>，這是大多數<span>PAN</span>的物理範圍。藍牙是我們用於創建<span>PAN</span>的主要內容之一，儘管<span>USB</span>和紅外線也可以用於這些網絡。藍牙的範圍在<span style="color: #ff0000;">1米至100米</span>之間，具體而言是使用的藍牙類別，但是大多數常見的藍牙設備是替換於10米的第二類設備。<span>PAN</span>的一些很好的例子是<span>USB</span>硬盤驅動器和筆記本電腦之間的連接，或者是無線連接到汽車立體聲系統的藍牙手機。</p>
+<p>局域網（<span style="color: #ff0000;">LAN</span>）</p>
+<p>由幾個設備組成，這些設備使計算機可以在<span style="color: #ff0000;">一個較小的地理區域</span>內部相互連接。最基本的是使用集線器，交換機或無線訪問點將多個工作站連接在一起。且<span style="color: #ff0000;">具有距離限制</span>，每個網段通常<span style="color: #ff0000;">限制在100米</span>。通常，<span>LAN</span>用於將辦公室的地板或較小網絡中的整個辦公樓聯網。<span>LAN</span>通常以<span style="color: #ff0000;">有線</span>或<span style="color: #ff0000;">無線</span>方式連接。如果為有線，則使用符合<span style="color: #ff0000;">乙太網路</span>（<span>IEEE 802.3</span>）標準的非屏蔽雙絞線電纜進行連接；如果為無線，則其使用<span style="color: #ff0000;">Wi-Fi</span>無線電信號（<span>IEEE 802.11</span>）標准進行連接。</p>
+<p>簡易局域網：</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image2.png"/></p>
+<p>複雜局域網：</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image3.jpeg"/></p>
+<p>城域網（<span style="color: #ff0000;">MAN</span>）</p>
+<p>城域網連接整個城市或縣的分散位置。這比局域網（<span style="color: #ff0000;">LAN</span>）覆蓋更大的地理區域，但是比廣域網（<span style="color: #ff0000;">WAN</span>）覆蓋的區域小部分。</p>
+<p>城域網示意圖：</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image13.jpeg"/></p>
+<p>廣域網（<span style="color: #ff0000;">WAN</span>）</p>
+<p>WAN：將地理位置相距較遠的網絡組件連接在一起。例如：將洛杉磯的辦公室連接到紐約的另一公司辦公室。這可以通過<span>Internet</span>的虛擬專用網絡（<span style="color: #ff0000;">VPN</span>）或使用將城市對實際連接在一起的專用租用線路來完成。或者採用交替連接方法，來自洛杉磯和紐約的兩個直接相連，它們便成為其中的廣域網拓撲的一部分。</p>
+<p><span>廣域網，城域網和局域網</span>關係：</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image14.jpeg"/></p>
+<p><strong>通過關係定義的網路</strong></p>
+<p>以通過這些分配資源的方式來定義網絡。</p>
+<p>1.使用的<span style="color: #ff0000;">客戶/服務器</span>模型。在客戶端<span>/</span>服務器模型中，一個或多個專用服務器向客戶端工作站提供對文件，掃描儀，打印機和其他資源的訪問。由於所有資源都放在幾個關鍵服務器上上，因此可以根據作業功能，網絡特權或部門分配資源，這<span style="color: #ff0000;">簡化</span>了管理和備份負擔，使網絡可以<span style="color: #ff0000;">集中管理</span>，並且可以提供更好的安全性。</p>
+<p>2.在<span style="color: #ff0000;">網絡上共享資源</span>，稱為對等模型。在對等模型中，所有工作站都被認為是替代的：每台計算機或工作站都直接與其他工作站共享其資源。沒有中央管理。例如，如果我與同事共享打印機，那麼每次同事打印文檔時，該文檔都會通過工作站發送到打印機。這些的缺點是，如果<span style="color: #ff0000;">關閉計算機</span>，我的同事將<span style="color: #ff0000;">無法訪問我的資源</span>，例如打印機。對等模型下管理的備份狀語從句：要<span style="color: #ff0000;">困難</span>得多，因為資源位於網絡上的眾多工作站上，使管理任務變得很繁重。此外，當允許節點或工作站之間的訪問時，<span style="color: #ff0000;">沒有真正的方法來保護網絡資源</span>。點對點資源共享的好處是入門<span style="color: #ff0000;">成本低</span>。</p>
+<p><strong>拓撲定義的網絡</strong></p>
+<p>當我們根據網絡的拓撲定義網絡時，我們會同時考慮<span style="color: #ff0000;">物理和邏輯</span>拓撲，並且這兩種拓撲都<span style="color: #ff0000;">不必針對單個網絡進行匹配</span>。物理拓撲決定了設備的物理連接方式，而邏輯拓撲決定了流量如何以邏輯方式流經網絡。拓撲類型很多，包括<span style="color: #ff0000;">總線</span><span>.</span><span style="color: #ff0000;">環形</span><span>.</span><span style="color: #ff0000;">星形</span><span>.</span><span style="color: #ff0000;">全網格</span>和<span style="color: #ff0000;">混合拓撲</span>。當前，使用最廣泛的模型是使用乙太網路的<span style="color: #ff0000;">物理星形</span>和<span style="color: #ff0000;">邏輯總線</span>拓撲。</p>
+<p>總線拓撲<span>:</span></p>
+<p>總線拓撲通常使用<span style="color: #ff0000;">一根電纜穿過需要網絡連接的區域</span>，每個希望連接到網絡的設備都通過該電纜連接。設備使用<span style="color: #ff0000;">T型連接器</span>或<span style="color: #ff0000;">穿孔抽頭</span>插入電纜。穿孔抽頭實際上是一種連接，其中金屬齒咬入電纜，與電纜內部的銅線進行物理連接。儘管總線拓撲是一種較舊的技術，基本上已不再使用，但在某些情況下仍可以將其作為邏輯實現。</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image15.png"/></p>
+<p>環形拓撲<span>:</span></p>
+<p>通常使用在<span style="color: #ff0000;">環形迴路中運行的電纜</span>，每個設備都連接到環形。數據在環上沿單個方向傳播。環形拓撲最常見的用途是與<span style="color: #ff0000;">骨幹光纖網絡</span>一起使用。<span style="color: #ff0000;">光纖分佈式數據接口（FDDI）</span>是用於在<span>LAN</span>中的光纖線上傳輸數據的一組標準。<span>FDDI</span>通常使用<span style="color: #ff0000;">兩個反向旋轉</span>的環來<span style="color: #ff0000;">提供更多的冗餘</span>。每個設備都通過在令牌環周圍傳遞令牌來等待其在令牌環上進行通信。因此，<span style="color: #ff0000;">環形拓撲網絡</span>也稱為<span style="color: #ff0000;">令牌環網絡</span>。由於有兩個反向旋轉的環，因此<span>FDDI</span>傾向於提供<span style="color: #ff0000;">比標準總線拓撲更多的冗餘</span>。但是，在大多數<span>LAN</span>中，<span style="color: #ff0000;">總線</span>和<span style="color: #ff0000;">環形拓撲</span>都很快被<span style="color: #ff0000;">星形拓撲</span>取代。</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image16.png"/></p>
+<p>星形拓撲<span>:</span></p>
+<p>為迄今為止使用的最常見的拓撲。我們發現幾乎所有<span style="color: #ff0000;">局域網</span>都使用<span style="color: #ff0000;">星型拓撲</span>。星型拓撲的所有設備都連接到一個點。單個連接點可以是集線器或交換機。在大多數現代網絡中，單個連接點將是一個交換機。<span style="color: #ff0000;">星形拓撲</span>是當今<span style="color: #ff0000;">主要的物理拓撲</span>，儘管它們並不用作邏輯拓撲<span>.</span>乙太網電纜，也稱為非屏蔽雙絞線，在採用星形配置的局域網中非常普遍。但是，<span style="color: #ff0000;">光纖連接</span>也可以用於<span style="color: #ff0000;">高速</span>或<span style="color: #ff0000;">高安全性</span>網絡。星形拓撲的缺點是<span style="color: #ff0000;">會造成單點故障</span>。如果中央設備（如交換機）發生故障，<span style="color: #ff0000;">整個網絡會失敗</span>。與總線和環形網絡品種不同，星形拓撲結構具有<span style="color: #ff0000;">減少費用</span>並<span style="color: #ff0000;">易於擴展</span>的優勢。</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image17.png"/></p>
+<p>全網狀拓撲<span>:</span></p>
+<p>到目前為止，此拓撲是<span style="color: #ff0000;">最冗餘</span>.<span style="color: #ff0000;">最昂貴</span>的拓撲，因為網絡中的每個節點或工作站都<span style="color: #ff0000;">直接</span>連接到每個其他節點。儘管這提供了最佳的路由，但<span style="color: #ff0000;">維護和操作非常昂貴</span>。可以使用公式<span style="color: #ff0000;">x = n（n-1）/ 2</span>計算任意數量的節點所需的連接數。例如，如果您有六個節點，則需要<span>15</span>條電纜才能將它們彼此連接。如果您有<span>50</span>個節點，則需要<span>1225</span>個單獨的連接。所以可以知到為什麼幾乎不將該拓撲用於局域網，因為計<span style="color: #ff0000;">算機數量過多</span>會導致<span style="color: #ff0000;">連接數量增加過快</span>。</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image18.png"/></p>
+<p>部分網格拓撲<span>:</span></p>
+<p>為了解決由<span style="color: #ff0000;">全網格拓撲</span>創建的<span style="color: #ff0000;">成本</span>問題，工程師創建了部分網格拓撲。部分網狀拓撲實際上是<span style="color: #ff0000;">混合全網狀拓撲</span>。它<span style="color: #ff0000;">提供</span>某些站點之間的<span style="color: #ff0000;">冗餘</span>和<span style="color: #ff0000;">最佳路由</span>，同時<span style="color: #ff0000;">避免</span>了連接每個站點的<span style="color: #ff0000;">開銷</span>。但是，為了成功創建它，必須<span style="color: #ff0000;">考慮網絡流量模式</span>以有效地進行設計。</p>
+<p>例<span>:<br/> </span>如果我們有兩個非常繁忙的站點，例如加利福尼亞州的洛杉磯和紐約州的紐約，我們可能希望通過將它們連接到第三個城市（例如華盛頓特區）為他們<span style="color: #ff0000;">提供更多的冗餘</span>。但是，速度較慢的站點（例如，南卡羅來納州格林維爾）可能只需要連接到這三個站點之一，然後就可以將其<span style="color: #ff0000;">用作連接</span>其他兩個站點的<span style="color: #ff0000;">起點</span>。這與我們的航空旅行系統非常相似，在航空旅行系統中，我們將大城市直接連接在一起，避免了直接飛往小城市的航班。例如<span>:</span>如果有人想從格林維爾飛往洛杉磯，他們會先從格林維爾飛往華盛頓特區，然後再乘較大的飛機直接從華盛頓飛往洛杉磯。</p>
+<p>相同的概念適用於部分網格拓撲。部分網狀網絡在最大和最繁忙的站點之間<span style="color: #ff0000;">添加了額外的資源</span>（連接），同時仍為大型站點之一提供較小的站點，但<span style="color: #ff0000;">服務卻最少</span>。較小的站點將大型集線器用作連接到網絡其餘部分的起點。</p>
+<p>網絡拓撲分類圖<span>:</span></p>
+<p><span><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH09/webcontent/PCH09/image20.png"/></span></p>
+<br />pch8冷卻 (p.73〜p.75) << <a href='pch8冷卻 (p.73〜p.75).html'>Previous</a> <a href='pch10網路設備 (p.80~p.82).html'>Next</a> >> pch10網路設備 (p.80~p.82)</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

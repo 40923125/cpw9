@@ -1,0 +1,238 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923125 cp2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923125 cp2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Hint.html'>Hint</a><ul class='dropdown'><li><a href='gitlab-ci.yml.html'>gitlab-ci.yml</a></li></ul><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li class='has-children'><a href='CMSiMDE 程式架構.html'>CMSiMDE 程式架構</a><ul class='dropdown'><li><a href='為何需要網際內容管理.html'>為何需要網際內容管理</a><li><a href='如何建立 CMSiMDE 子模組.html'>如何建立 CMSiMDE 子模組</a><li><a href='為何需要以子模組的設計.html'>為何需要以子模組的設計</a><li><a href='兩種不同的 git clone.html'>兩種不同的 git clone</a><li><a href='假如 CMSiMDE 不設為子模組.html'>假如 CMSiMDE 不設為子模組</a><li><a href='為何需要有動態網頁與靜態網頁.html'>為何需要有動態網頁與靜態網頁</a><li><a href='CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果.html'>CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果</a></li></li></ul></ul><li class='has-children'><a href='作業.html'>作業</a><ul class='dropdown'><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li><a href='pch8冷卻 (p.73〜p.75).html'>pch8冷卻 (p.73〜p.75)</a><li><a href='pch9網路概述（p.76〜p.79）.html'>pch9網路概述（p.76〜p.79）</a><li><a href='pch10網路設備 (p.80~p.82).html'>pch10網路設備 (p.80~p.82)</a><li><a href='pch11網路媒體 (p.83 p.84).html'>pch11網路媒體 (p.83 p.84)</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">pch9網路概述（p.76〜p.79） << <a href='pch9網路概述（p.76〜p.79）.html'>Previous</a> <a href='pch11網路媒體 (p.83 p.84).html'>Next</a> >> pch11網路媒體 (p.83 p.84)<br /><h1>pch10網路設備 (p.80~p.82)</h1>
+<p>網絡設備根據其用途而有所不同，例如<span style="color: #ff0000;">集線器</span><span>.</span><span style="color: #ff0000;">交換機</span><span>.</span><span style="color: #ff0000;">路由器</span><span>.</span><span style="color: #ff0000;">網橋</span><span>.</span><span style="color: #ff0000;">網絡適配器</span>和<span style="color: #ff0000;">媒體</span>。在討論設備時，您應注意其用途，優點和局限性。我們將探討如何安裝網絡適配器。</p>
+<p><strong>集線器</strong></p>
+<p>為<span style="color: #ff0000;">最簡單</span>的網絡設備之一，用於<span style="color: #ff0000;">多個網絡設備</span>和<span style="color: #ff0000;">工作站</span>相互<span style="color: #ff0000;">連接</span>，從而形成一個網絡。集線器也稱為<span style="color: #ff0000;">多端口中繼器</span>。集線器通過在一個端口中接收信號並將該信號重新廣播到其所有其他端口來工作。標準集線器<span style="color: #ff0000;">沒有任何“智能”</span>（能夠根據不同情況或要求進行更改的能力），因此我們通常將它們稱為<span>“</span><span style="color: #ff0000;">啞集線器</span><span>”</span>。集線器可以分為<span style="color: #ff0000;">主動</span>或<span style="color: #ff0000;">被動</span>兩種。活動集線器會在其所有端口上重複接收到的信號，並將該信號放大到最大強度。無源集線器僅重複信號而不增加任何放大。集線器是一種較舊的技術，可<span style="color: #ff0000;">輕鬆增加可用端口的數量</span>，但這會導致<span style="color: #ff0000;">過多的網絡錯誤和衝突</span>。集線器有較新的設備，稱為智能集線器。<span style="color: #ff0000;">智能集線器</span>為實質具有增強功能（例如，使用簡單網絡管理協議（<span>SNMP</span>））的活動集線器。</p>
+<p>乙太網路集線器的三種基本類型如下：</p>
+<p>1.<span style="color: #ff0000;">無源集線器–重複信號而不放大</span></p>
+<p>2.<span style="color: #ff0000;">有源集線器–重複放大信號</span></p>
+<p>3.<span style="color: #ff0000;">智能集線器–具有增強功能的活動集線器（例如：SNMP）</span></p>
+<p>集線器內部<span style="color: #ff0000;">沒有設計完好的安全性</span>，因為它們只是將從一個端口接收的所有信息重新廣播到另一個端口。本質上，集線器<span style="color: #ff0000;">僅依賴於連接的工作站來“偵聽”其端口上的信息</span>（如果該信息專門針對該工作站）。當信息沒有發送給它時，工作站應該只是忽略數據。但是，可以將網卡置於<span>“</span>混雜<span>”</span>模式，在該模式下，網卡將<span style="color: #ff0000;">偵聽所有流量</span>，而不管該流量指向哪個工作站。這使集線器非常<span style="color: #ff0000;">不安全</span>。</p>
+<p>集線器的另一個缺點是<span style="color: #ff0000;">必須共享帶寬</span>，因為所有設備都在同一個衝突域中運行。因此，如果您有一個<span>100 Mbps</span>的集線器，但將四個設備連接到該集線器，則每個設備將有效地以<span>25 Mbps</span>的速度運行。使用<span>16</span>端口，<span>24</span>端口或<span>48</span>端口集線器時，這可能會導致<span style="color: #ff0000;">網絡流量大幅下降</span>。</p>
+<p>LAN網絡圖<span>:</span></p>
+<p><span><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH10/webcontent/PCH10/image1.jpeg"/></span></p>
+<p><strong>網橋</strong></p>
+<p>因為集線器與所有在單個衝突域中起作用的設備一起運行，所以需要一個可以<span style="color: #ff0000;">將該衝突域分解為較小單元</span>的網絡設備，以幫助網絡更高效地運行。例如，如果一個集線器連接到另一個集線器，則它們都在單個衝突域下運行<span> </span>。橋用於將兩個集線器連接在一起，但仍使集線器的衝突域保持分離。多個網段的這種互連在一起使網絡可以<span style="color: #ff0000;">擴展為大型網絡</span>，而<span style="color: #ff0000;">不會降低該網絡的性能</span>。網橋比集線器更具智能；實際上，他們實際上是在分析源<span style="color: #ff0000;">媒體存取控制（MAC）</span>地址在進入網橋的幀數中，並根據這些地址填充內部<span>MAC</span>表。未來的路由決策將基於那些目標<span>MAC</span>地址。通過僅將信息轉發到與網絡設備關聯的根集線器，這種基於幀中目標<span>MAC</span>地址的智能轉發可<span style="color: #ff0000;">減少網絡流量</span>。</p>
+<p><strong>交換機</strong></p>
+<p>用於將<span style="color: #ff0000;">多個網段連接在一起</span>，無論它們是從交換機到交換機還是從工作站到工作站。交換機上的每個端口都充當其自己的衝突域。交換機是集線器和網橋的演進。本質上，交換機上的每個端口都像是集線器一樣工作，帶有將集線器的端口連接到工作站的網橋，從而<span style="color: #ff0000;">將網絡衝突的機會降低到零</span>。</p>
+<p>交換機是<span style="color: #ff0000;">智能設備</span>，它們根據其學習到的<span>MAC</span>地址並放置在其<span>MAC</span>表中來做出轉發決策。交換機在輸入源<span>MAC</span>地址時會對其進行分析，然後以幀的形式填充源<span>IP</span>地址，以使其與交換機端口匹配。這允許交換機僅將幀轉發到單個交換機端口上的正確設備，從而<span style="color: #ff0000;">提高安全性</span>和<span style="color: #ff0000;">網絡速度</span>。</p>
+<p>如果交換機接收到幀，但在其轉發表中沒有目標<span>MAC</span>地址，則它將將該幀分流到除了源以外的所有端口上，以請求目標<span>MAC</span>地址的位置。交換器可以分解衝突域，但需創建<span style="color: #ff0000;">廣播域</span>。</p>
+<p>因為無論信息卡是否處於<span>“</span>混雜<span>”</span>模式，只有信息所針對的設備才能收到副本，所以<span style="color: #ff0000;">安全性提高</span>了，。這在操作上<span style="color: #ff0000;">類似</span>於<span style="color: #ff0000;">老式的電話接線員總機</span>。如果信息未發送到您的端口，則您的端口將不會收到該信息。另外，由於每個端口都在其自己的衝突域中，因此<span style="color: #ff0000;">網絡速度得以提高</span>。無論網絡上有多少設備，每個交換機端口都<span style="color: #ff0000;">可以全速運行</span>，因此對於<span>100 Mbps</span>交換機，每個設備都以<span>100 Mbps</span>的速度運行。</p>
+<p>網絡圖<span>(</span>交換機<span>):</span></p>
+<p><span><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH10/webcontent/PCH10/image2.png"/></span></p>
+<p><strong>路由器</strong></p>
+<p>路由器相對於網路配置圖的<span style="color: #ff0000;">第3層（數據包）</span>，而交換機位於<span style="color: #ff0000;">第2層（幀）</span>。路由器根據<span style="color: #ff0000;">IP地址</span>將網段分開，並且僅在<span style="color: #ff0000;">配置時</span>將數據包轉發出網段。這種設計可以分解由交換機創建的廣播域。由網絡專業人員決定將路由器配置為將不同的網絡連接在一起並執行智能路由決策。路由器與計算機的關係最為密切，因為它具有處理器和複雜的操作系統。路由器比較數據包源和目標的<span>IP</span>地址，並基於此邏輯地址（例如，<span>IPv4</span>和<span>IPv6</span>地址）將流量轉發到網絡或從網絡轉發流量。路由器通常是功能豐富的設備，並且支持多種接口類型，包括<span style="color: #ff0000;">非屏蔽雙絞線</span><span>.</span><span style="color: #ff0000;">光纖</span>和<span style="color: #ff0000;">同軸電纜</span>連接。像交換機一樣，路由器上的每個端口<span style="color: #ff0000;">都是一個單獨的衝突域</span>。使用訪問控制列表，路由器可以根據<span style="color: #ff0000;">端口或地址阻止對網絡的訪問</span>。這種阻塞增加了<span style="color: #ff0000;">網絡的安全性</span>。</p>
+<p>網絡圖<span>(</span>路由器<span>):</span></p>
+<p><span><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH10/webcontent/PCH10/image3.png"/></span></p>
+<p><strong>網絡適配器</strong></p>
+<p>用於通過使用媒體將工作站連接到網絡。可以通過幾種方式將網絡適配器內置到設備的主板中：</p>
+<p>1.使用<span style="color: #ff0000;">集成端口集群</span>。</p>
+<p>2.通過使用<span style="color: #ff0000;">內部擴展卡</span>（<span style="color: #ff0000;">PCIe<span style="color: #000000;">.</span>PCI</span>或<span style="color: #ff0000;">mini-PCIe</span>）添加到工作站。</p>
+<p>3.通過使用<span style="color: #ff0000;">外部連接的卡</span>，例如<span style="color: #ff0000;">USB</span>或<span style="color: #ff0000;">PCMCIA</span>。</p>
+<p>網絡適配器有兩種主要類型：<span style="color: #ff0000;">有線</span>和<span style="color: #ff0000;">無線</span>。有線卡支持各種電纜類型，例如<span style="color: #ff0000;">非屏蔽雙絞線（UTP）</span><span>.</span><span style="color: #ff0000;">光纖</span>和<span style="color: #ff0000;">同軸電纜</span>。這些各種電纜類型稱為<span style="color: #ff0000;">媒體</span>。</p>
+<p><strong>媒體</strong></p>
+<p>用於對<span style="color: #ff0000;">兩個設備端口之間</span>（例如計算機和交換機之間）的物理連接進行分類的術語。介質由<span style="color: #ff0000;">銅纜</span>，<span style="color: #ff0000;">光纜</span>或<span style="color: #ff0000;">even radio frequency waves</span>（用於<span>Wi-Fi</span>網絡）組成。介質的<span style="color: #ff0000;">成本差異很大</span>，從無線電波的免費成本到非屏蔽雙絞線（銅纜）的價格便宜，再到光纖電纜的價格昂貴。媒體的類型確定<span style="color: #ff0000;">特定網絡的帶寬速度</span>，<span style="color: #ff0000;">容量</span>和<span style="color: #ff0000;">距離</span>限制。</p>
+<p>網絡圖<span>(</span>媒體<span>):</span>箭頭指向處</p>
+<p><img src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH10/webcontent/PCH10/image4.png"/></p>
+<p><strong>安裝網絡適配器</strong></p>
+<p>有時可能需要安裝<span style="color: #ff0000;">附加網絡接口卡（NIC）</span>。當前的台式機主板的後方輸入<span>/</span>輸出（<span>I / O</span>）面板上應<span style="color: #ff0000;">具有內置的NIC<span style="color: #000000;">。</span></span>如果內置<span>NIC</span>出現<span style="color: #ff0000;">故障</span>，或者<span style="color: #ff0000;">需要升級</span>以匹配當前的局域網（<span>LAN</span>）規格（即從<span>10/100 BaseT</span>到<span>10/100</span>），則安裝附加卡可以使機器<span style="color: #ff0000;">保持運行狀態</span>。<span> / 1000</span>或<span>10GBaseT</span>）。</p>
+<p>安裝<span>NIC</span>操作步驟：</p>
+<ol>
+<li>檢查文檔以確認哪個<span>NIC</span>將與您的擴展插槽（<span>PCI</span>或<span>PCIe</span>）和<span>LAN</span>要求相匹配。確保適配器可與主板配合使用。</li>
+<li>關閉計算機電源，然後從計算機上斷開主電源線。</li>
+<li>按照安全維修慣例（正確的接地<span>/</span>防靜電皮帶），打開計算機的側蓋，檢查可用的擴展槽。</li>
+<li>匹配新<span>NIC</span>卡的連接器<span>/</span>引腳，並驗證它是否與建議的插槽匹配。</li>
+<li>從背面板上卸下相應的計算機<span>PCI</span>選件插槽蓋。</li>
+<li>將<span>NIC</span>的連接器對準擴展插槽，並在將支架向上推至計算機的背面板上時將其牢固就位，以確保正確對齊。用通常提供的螺釘擰緊新的<span>NIC</span>。</li>
+<li>請按照安全維修步驟關閉計算機的側蓋。</li>
+<li>重新連接主電源線。</li>
+<li>打開機器電源。</li>
+</ol>
+<p>安裝<span>NIC</span>硬件後，驅動程序應根據<span style="color: #ff0000;">操作系統自動安裝</span>。對於<span>Windows</span>（<span>Vista / Win7 / Win8.1 / Win10</span>），請<span style="color: #ff0000;">驗證網絡和共享中心中的連接</span>。對於<span>Linux</span>，請轉到網絡設置，然後根據<span>Linux</span>發行版（例如<span>Red Hat Linux</span>或<span>Ubuntu</span>）在線搜索適當的驅動程序<span> </span>。</p>
+<p>帶有同軸端口的<span>NIC:</span></p>
+<p><span><img alt="Photograph of an NIC. The card is a rectangular board. It has gold pins on the left and it has a metal end. There are two ports protruding from the metal end: a coaxial port and an Ethernet port." src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH10/webcontent/PCH10/image5.jpeg"/></span></p>
+<br />pch9網路概述（p.76〜p.79） << <a href='pch9網路概述（p.76〜p.79）.html'>Previous</a> <a href='pch11網路媒體 (p.83 p.84).html'>Next</a> >> pch11網路媒體 (p.83 p.84)</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
