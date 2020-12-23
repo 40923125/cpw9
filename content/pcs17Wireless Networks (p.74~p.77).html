@@ -1,0 +1,290 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cp2020</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923125 cp2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923125 cp2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Hint.html'>Hint</a><ul class='dropdown'><li><a href='gitlab-ci.yml.html'>gitlab-ci.yml</a></li></ul><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li class='has-children'><a href='CMSiMDE 程式架構.html'>CMSiMDE 程式架構</a><ul class='dropdown'><li><a href='為何需要網際內容管理.html'>為何需要網際內容管理</a><li><a href='如何建立 CMSiMDE 子模組.html'>如何建立 CMSiMDE 子模組</a><li><a href='為何需要以子模組的設計.html'>為何需要以子模組的設計</a><li><a href='兩種不同的 git clone.html'>兩種不同的 git clone</a><li><a href='假如 CMSiMDE 不設為子模組.html'>假如 CMSiMDE 不設為子模組</a><li><a href='為何需要有動態網頁與靜態網頁.html'>為何需要有動態網頁與靜態網頁</a><li><a href='CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果.html'>CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果</a></li></li></ul></ul><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li class='has-children'><a href='PC Hardware.html'>PC Hardware</a><ul class='dropdown'><li><a href='pch8冷卻 (p.73〜p.75).html'>pch8冷卻 (p.73〜p.75)</a><li><a href='pch8Cooling (p.73〜p.75).html'>pch8Cooling (p.73〜p.75)</a><li><a href='pch9網路概述（p.76〜p.79）.html'>pch9網路概述（p.76〜p.79）</a><li><a href='pch9Networking Overview（p.76〜p.79）.html'>pch9Networking Overview（p.76〜p.79）</a><li><a href='pch10網路設備 (p.80~p.82).html'>pch10網路設備 (p.80~p.82)</a><li><a href='pch10Networking Hardware (p.80~p.82).html'>pch10Networking Hardware (p.80~p.82)</a><li><a href='pch11網路媒體 (p.83 p.84).html'>pch11網路媒體 (p.83 p.84)</a><li><a href='pch11Networking Media (p.83 p.84).html'>pch11Networking Media (p.83 p.84)</a></li></ul><li class='has-children'><a href='PC Software.html'>PC Software</a><ul class='dropdown'><li><a href='pcs17無線網路 (p.74~p.77).html'>pcs17無線網路 (p.74~p.77)</a><li><a href='pcs17Wireless Networks (p.74~p.77).html'>pcs17Wireless Networks (p.74~p.77)</a><li><a href='pcs18有線網路安全 (p.78~p.80).html'>pcs18有線網路安全 (p.78~p.80)</a><li><a href='pcs18Wired Network Security (p.78~p.80).html'>pcs18Wired Network Security (p.78~p.80)</a><li><a href='pcs19惡意軟件 (p.81~p.85).html'>pcs19惡意軟件 (p.81~p.85)</a><li><a href='pcs19Malware (p.81~p.85).html'>pcs19Malware (p.81~p.85)</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">pcs17無線網路 (p.74~p.77) << <a href='pcs17無線網路 (p.74~p.77).html'>Previous</a> <a href='pcs18有線網路安全 (p.78~p.80).html'>Next</a> >> pcs18有線網路安全 (p.78~p.80)<br /><h1>pcs17Wireless Networks (p.74~p.77)</h1>
+<p><strong>Overview</strong></p>
+<p><span>In this module, we will discuss wireless networks. We will focus on wireless network security and how to access a network via Wi-Fi.</span></p>
+<p><strong>Wireless Security</strong></p>
+<p id="N105AE" lang="">Wireless security is extremely important when setting up a wireless network. Without security, anyone can gain access to files and folders, see all wireless transmissions, introduce their own malware, use your wireless connection to access illegal content or launch an attack through your ISP, or download harmful content.</p>
+<p id="N105B1" lang="">Wireless networks use the air as their transport medium by using the radio frequencies. This means that the medium is not secure because any user within the distance limitation can access the wireless network, if encryption and passwords are not utilized.</p>
+<p id="N105B4" lang="">There are four easy steps to secure an access point:</p>
+<p id="N105B7" lang="">1. Lock down the router or access point.</p>
+<p id="N105BA" lang="">2. Configure the service set identifier (SSID), and disable SSID broadcasts.</p>
+<p id="N105BD" lang="">3. Configure wireless security.</p>
+<p id="N105C0" lang="">4. Limit users by media access control (MAC) address.</p>
+<p><strong>Lock Down Access Point and Access</strong></p>
+<p id="N105CC" lang="">There are several methods for locking down the access point. The more methods you use, the more secure the network will be. You can lock down the access point or router by changing the default password to a strong password. You can also lock down the system by disabling wireless web access so only a directly connected computer can manage the device. You can disable remote management so the device cannot be accessed over the Internet. You can only allow access through the more secure Hypertext Transfer Protocol Secure (HTTPS). Finally, you can disable universal plug-and-play.</p>
+<p id="N105CF" lang="">Additionally, you should change the network access by changing the default IP address for the network. It’s also good practice to limit the number of addresses available through the dynamic host configuration protocol (DHCP). You can change the default SSID, and disable its broadcast so users must know what it is before connecting to it.</p>
+<div class="image shouldbeleft"><img alt="Images of two screens showing options available for a generic router setup. The top screen, labeled Setup, has five tabs across the top. The Setup tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Internet (WAN) Setup, Network (LAN) Setup, and Time Settings. There are text entry boxes in all sections. In the top section, there is also a pulldown menu. In the middle section there are two transistor buttons, and in the bottom section there is a check box. There are two buttons at the bottom: Save Settings and Channel Changes. The bottom screen, labeled Wireless, has five tabs across the top. The Wireless tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Configuration, 2.4 GHz Setting, and 5 GHz Setting. In the top section, there are two transistor buttons. In both the middle and bottom sections there are two transistor buttons and text entry boxes. There are two buttons at the bottom: Save Settings and Channel Changes." class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image1.png" title="Images of two screens showing options available for a generic router setup. The top screen, labeled Setup, has five tabs across the top. The Setup tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Internet (WAN) Setup, Network (LAN) Setup, and Time Settings. There are text entry boxes in all sections. In the top section, there is also a pulldown menu. In the middle section there are two transistor buttons, and in the bottom section there is a check box. There are two buttons at the bottom: Save Settings and Channel Changes. The bottom screen, labeled Wireless, has five tabs across the top. The Wireless tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Configuration, 2.4 GHz Setting, and 5 GHz Setting. In the top section, there are two transistor buttons. In both the middle and bottom sections there are two transistor buttons and text entry boxes. There are two buttons at the bottom: Save Settings and Channel Changes."/></div>
+<div class="imagewrap"><span class="image"><img alt="Images of two screens showing options available for a generic router setup. The top screen, labeled Setup, has five tabs across the top. The Setup tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Internet (WAN) Setup, Network (LAN) Setup, and Time Settings. There are text entry boxes in all sections. In the top section, there is also a pulldown menu. In the middle section there are two transistor buttons, and in the bottom section there is a check box. There are two buttons at the bottom: Save Settings and Channel Changes. The bottom screen, labeled Wireless, has five tabs across the top. The Wireless tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Configuration, 2.4 GHz Setting, and 5 GHz Setting. In the top section, there are two transistor buttons. In both the middle and bottom sections there are two transistor buttons and text entry boxes. There are two buttons at the bottom: Save Settings and Channel Changes." class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image2.png" title="Images of two screens showing options available for a generic router setup. The top screen, labeled Setup, has five tabs across the top. The Setup tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Internet (WAN) Setup, Network (LAN) Setup, and Time Settings. There are text entry boxes in all sections. In the top section, there is also a pulldown menu. In the middle section there are two transistor buttons, and in the bottom section there is a check box. There are two buttons at the bottom: Save Settings and Channel Changes. The bottom screen, labeled Wireless, has five tabs across the top. The Wireless tab is selected and highlighted with a blue bar. The screen then has three areas highlighted with orange bars: Configuration, 2.4 GHz Setting, and 5 GHz Setting. In the top section, there are two transistor buttons. In both the middle and bottom sections there are two transistor buttons and text entry boxes. There are two buttons at the bottom: Save Settings and Channel Changes."/></span>
+<p id="N105DC" lang="">Caption: Screens showing options available for a generic router setup. Image used under CC-BY license from National Information Security and Geospatial Technologies Consortium (NISGTC).</p>
+</div>
+<p><strong>SSID — Service Set Identifier</strong></p>
+<p><span>One method of securing your wireless network is to disable the broadcast of the SSID. The SSID, or service set identifier, is essentially the name of the wireless network. To secure the wireless network, you should first change the SSID to something other than the default. If a user sees a default SSID, it can often be assumed that there is no administrative password in place on the wireless access point; therefore, the access point becomes the target of attacks. Also, if there are multiple access points in the same area, and they all have the default name, it becomes difficult to determine which access point belongs to which network. When changing the default SSID, do not use your family’s name, company name, or location, as this makes your access point a source of information to use against you and target your network. Once all your wireless clients are configured, it is a good idea to disable the SSID broadcast. This will prevent the access point from announcing its presence in the area. Once the SSID is disabled from broadcasting, users will no longer find the wireless network shown in their available networks, unless they have connected to it previously. This means that you have to set your client machines to connect to the network even when it is not broadcasting.</span></p>
+<p><strong>Wi-Fi Protected Access</strong></p>
+<p><span>Due to the nature of Wi-Fi being transmitted through radio frequencies, the data transferred is susceptible to being viewed and captured by any other radio receiver. Encryption and network security have become a paramount concern for IT professionals at all levels. If a Wi-Fi network is set up without encryption, it is “open,” and anybody with packet sniffing software in the vicinity can capture the transmissions between the host and the wireless access point. Public cafes and retailers offering open access do so as a courtesy, but users must be aware that any online login information, such as connecting to a bank, Facebook, or Twitter, is not secure and is susceptible to capture. prospective technicians must know the current encryption types and best practices to secure a WLAN.</span></p>
+<p><strong>Encryption Types</strong></p>
+<p><span>In order to provide security for wireless networks, the 802.11 standards provide for three major types of password protection/encryption: wired equivalent privacy (WEP), Wi-Fi protected access (WPA), and Wi-Fi protected access 2 (WPA2).</span></p>
+<p><strong>Wired Equivalent Privacy (WEP)</strong></p>
+<p id="N1060D" lang="">In the original 802.11 standard, the only security provided was WEP, which at the time claimed to be as secure as a wired network connection. This wireless connection was secured using encryption with a 40-bit WEP preshared key (PSK) that all access points and client devices would use. This symmetric encryption was a good idea, but since the key was so small (40 bits), it was quickly broken by attackers.</p>
+<p id="N10610" lang="">To solve this, WEP began using a 64-bit key, and could support keys up to 128 bits, which would provide stronger encryption. Unfortunately, the WEP algorithm used for encryption also relied on using an initialization vector (IV) in combination with the PSK to create the encryption, and the IV is created using only 24 bits, which means there are only 16,777,216 possible values. This limited combination value means that the IV will begin repeating eventually (in five to seven hours) and an attacker capturing packets can get two with the same IV. This is known as a keystream or IV attack. Many open-source utilities exist that can crack WEP passwords within just a few minutes on modern hardware. For this reason, WEP is insecure and should never be used in your networks.</p>
+<p><strong>Wi-Fi Protected Access (WPA)</strong></p>
+<p id="N1061C" lang="">The Institute for Electrical and Electronics Engineers (IEEE), in conjunction with the<span> Wi-Fi Alliance</span>, began developing a solution to WEP’s shortcomings. In 2003, the Wi-Fi Alliance released the WPA standard as a stopgap to replace the now insecure WEP. WPA is built around the same<span> </span><a aria-describedby="N10624" class="extra" id=""></a>Rivest Cipher 4 (RC4) stream cipher<span> </span>but used a 48-bit IV in place of WEP’s 24-bit IV. This upgraded IV uses a temporal key integrity protocol (TKIP). TKIP is an IEEE standard designed to provide more secure encryption using a 128-bit dynamic per packet encryption key. TKIP is a suite of<span> algorithms</span><span> </span>designed as a firmware upgrade for WLAN network interface cards (NIC) on the client side, but not necessarily access points manufactured before 2003. TKIP encrypts each data<span> packet</span><span> </span>with a unique encryption<span> key</span>, and the keys are much stronger than WEP due to the 128-bit length. To increase key strength, TKIP includes four additional algorithms.</p>
+<p id="N10639" lang="">In addition to TKIP, the WPA standard uses message integrity check (MIC) to confirm that data was not modified in transit as opposed to the<span> </span><a aria-describedby="N1063C" class="extra" id=""></a>cyclic redundancy check (CRC)<span> </span>used in WEP. MIC uses a “hash” to verify that a message has not been altered. WPA supports both PSK mode and enterprise mode. In enterprise mode, users are required to authenticate before exchanging their keys and each key between the client and access point is only temporary, reducing the chance of compromise. Unfortunately, WPA also suffers security flaws centered on the use of passphrases and PSK key management, and now is also considered to be insecure.</p>
+<p><strong>Wi-Fi Protected Access 2 (WPA2)</strong></p>
+<p id="N1064B" lang="">Wi-Fi protected access version 2 (WPA2) replaces both WEP and WPA because of the insecurities with the 24-bit and 48-bit initialization vectors. IEEE ratified WPA2 as 802.11i in 2004. WPA2 requires stronger encryption and integrity checking, using<span> </span><a aria-describedby="N1064E" class="extra" id=""></a>counter mode cipher block chaining message authentication code protocol (CCMP)<span> </span>. While WPA2 supports a preshared key and the earlier 802.1x standards, it specifies advanced encryption standard (AES), which is the most secure. AES can use a 128, 192, or 256-bit key, and is the same algorithm used worldwide as well as by the United States government to protect classified networks.</p>
+<p id="N10654" lang="">Using WPA2 creates a secure wireless network, but only when used with good passwords and shared keys. WPA2 also supports enterprise mode for centralized user authentication (used in corporate networks) and a personal mode for PSK support (used in most homes and small offices). The key to security with WPA2 is a strong password, since the current method of breaking into a WPA2 network is to use<span> </span><a aria-describedby="N10657" class="extra" id=""></a>brute force attacksagainst the PSK. The minimum password is eight characters and the maximum is 63 characters. The ideal password length is 12–16 characters following strong password protocol of not using standard dictionary words and using a mix of uppercase and lowercase letters, numbers, and symbols. If your key is long and complex, the attackers will not be able to penetrate your WPA2 wireless networks. For more information about securing WPA2, read this<span> article</span>.</p>
+<p><strong>Wi-Fi Protected Access 2 Enterprise</strong></p>
+<p id="N1066B" lang="">WPA2 enterprise is a client/server model using the remote authentication dial-in user service (RADIUS) protocol found in larger corporate networks. The RADIUS server runs in the application layer using UDP (user datagram protocol) as a transport method, and is usually a software background service running on a UNIX or Windows server. WPA2 enterprise eliminates a shared key and replaces it with a username and a password to connect to the corporate Wi-Fi network.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of a screen showing wireless security settings. At the top, Wireless Security appears in a black bar. To the right, there is a pulldown menu with text. WPA2 Personal is selected. At the bottom, Wireless Security appears again in a black bar and to the right there are two pulldown menus with text and two text entry fields." class="popimg" id="_i_7" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image3.png" title="Image of a screen showing wireless security settings. At the top, Wireless Security appears in a black bar. To the right, there is a pulldown menu with text. WPA2 Personal is selected. At the bottom, Wireless Security appears again in a black bar and to the right there are two pulldown menus with text and two text entry fields."/></span>
+<p id="N10673" lang="">Screen showing wireless security settings. Image used under CC-BY license from National Information Security and Geospatial Technologies Consortium (NISGTC).</p>
+<p lang=""><strong>Media Access Control (MAC) Filtering</strong></p>
+<p id="N105AC" lang="">MAC filtering is another method of securing a network (both wired and wireless). MAC filtering relies on the layer 2 address of the network interface card (NIC). A MAC address is a 48-bit address individually assigned to each network interface card by the manufacturer, with the first 24 bits identifying the manufacturer and the last 24 bits identifying the specific individual network interface card. MAC filtering is configured at the wireless access point or wireless router by creating a whitelist (allowed) or blacklist (denied) of specific MAC addresses. It is best to let all devices connect to the access point first so their MAC addresses will appear automatically in the list, and they don't have to be entered manually. Note that people are not identified by the MAC address, instead it is their devices that are identified, so it is important that the devices remain secure through additional means. MAC filtering is part of a total security solution, not a solution in itself.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of screen displaying MAC filtering on a wireless router. The screen is titled MAC Address Filter List in blue text. There is a button labeled Wireless Client MAC List at the top. There are two columns of text entry boxes with MAC numbers to the left of each box. The screen is cut off at the bottom." class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image4.png" title="Image of screen displaying MAC filtering on a wireless router. The screen is titled MAC Address Filter List in blue text. There is a button labeled Wireless Client MAC List at the top. There are two columns of text entry boxes with MAC numbers to the left of each box. The screen is cut off at the bottom."/></span>
+<p id="N105B4" lang="">Screen displaying MAC filtering on a wireless router. Image used under CC-BY license from National Information Security and Geospatial Technologies Consortium (NISGTC).</p>
+<p lang=""><strong>Additional Wireless Security Methods</strong></p>
+</div>
+<div class="section" id="N105B7">
+<div class="sectionContain">
+<p id="N105BE" lang="">Wireless security can also be enhanced by choosing static versus dynamic IP addressing. By utilizing a static address, each client must manually be configured for the subnet, gateway, and DNS server, making this a more secure option for a wireless network. Conversely, a dynamic scheme could be utilized, where addresses are automatically assigned using a DHCP server. While this eases setup through the use of automatic configuration, if a malicious user connects to the network, they are also automatically configured if other steps — such as MAC filtering, use of WPA2 AES passwords, and changing default settings — are not taken.</p>
+<p id="N105C1" lang="">In a small office/home office (SOHO) network, manually configuring IP addresses might be of value, provided you have a fixed number of machines. However, with the ubiquity of cellular devices and other small personal computing devices, accessing a network is difficult to manage and much less practical than using DHCP. When using DHCP in your networks, you can minimize the number of DHCP addresses available to prevent unwanted use of your network by malicious users. Further, most SOHO routers today include a guest network that will allow users access to only services you configure at the router (usually Internet but not LAN access).</p>
+<p id="N105C4" lang="">Lastly, you need to be mindful of the placement of your access points for effective and secure coverage. If you are using more than one access point, you must plan to prevent the access points from causing interference with each other. This is done by separating them logically by using distant channels to prevent overlap. Also, you should ensure that the power levels of your access point radios are set low enough to keep their signals within your building, but high enough to provide full coverage throughout your area. If your signal is too strong, a malicious user could hijack wireless signals from the parking lot or across the street. This is known as “wardriving.”</p>
+<p lang=""><strong>Accessing a Network Via WiFi</strong></p>
+<p id="N105A4" lang="">Accessing a wireless network from a Windows computer is fairly straightforward, but as with many other features we’ve discussed, the process is similar in Windows Vista and Windows 7, but differs a bit in Windows 8.1 and Windows 10.</p>
+<p id="N105A7" lang="">To access a wireless network, you’ll need two pieces of information:</p>
+<ul lang="">
+<li lang="">The name of the network (SSID).</li>
+<li lang="">The password for the network (security key).</li>
+</ul>
+<div class="section" id="N105B3">
+<div class="sectionContain">
+<p lang=""><strong>Windows Vista and Windows 7</strong></p>
+<p id="N105BA" lang="">From Windows Vista or Windows 7, the easiest way to access the network is by using the Wi-Fi icon in the system tray on the lower right of your Desktop.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of the lower right corner of the Windows Desktop, showing the Windows Taskbar. There is a black bar with the word Desktop on the left, several icons, and a digital clock showing the time." class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image5.png" title="Image of the lower right corner of the Windows Desktop, showing the Windows Taskbar. There is a black bar with the word Desktop on the left, several icons, and a digital clock showing the time."/></span>
+<p id="N105C2" lang="">Screenshot of Windows Taskbar showing the Wi-Fi icon in the system tray.</p>
+</div>
+<p id="N105C5" lang="">Clicking on the Wi-Fi icon brings up a list of available wireless networks, along with a status indicator showing the strength of the signal for each network. Click on the name of the network to which you would like to connect. If you don’t see your desired network, make sure that you’re close enough to the router for your computer to receive the wireless signal.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of the lower right corner of the Windows desktop showing the Windows Taskbar. There is a black bar with the word Desktop on the left, several icons, and a digital clock showing the time. Above the Taskbar is a window showing a list of available wireless networks." class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image6.png" title="Image of the lower right corner of the Windows desktop showing the Windows Taskbar. There is a black bar with the word Desktop on the left, several icons, and a digital clock showing the time. Above the Taskbar is a window showing a list of available wireless networks."/></span>
+<p id="N105CD" lang="">List of available networks.</p>
+</div>
+<p id="N105D0" lang="">Finally, enter the password or security key for the network.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of the lower right corner of the Windows Desktop showing the Windows Taskbar. There is a black bar with the word “Desktop” on the left, several icons, and a digital clock showing the time. Above the Taskbar is a window with text at the top, a text entry box, a checkbox, and two buttons labeled OK and Cancel." class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image7.png" title="Image of the lower right corner of the Windows Desktop showing the Windows Taskbar. There is a black bar with the word “Desktop” on the left, several icons, and a digital clock showing the time. Above the Taskbar is a window with text at the top, a text entry box, a checkbox, and two buttons labeled OK and Cancel."/></span>
+<p id="N105D8" lang="">Entering the wireless network password.</p>
+<p lang=""><strong>Windows 8.1</strong></p>
+</div>
+</div>
+</div>
+<div class="section" id="N105DD">
+<div class="sectionContain">
+<p id="N105E4" lang="">In Windows 8.1, using the Wi-Fi icon will work if you are in the Windows Desktop, just like in Windows Vista or Windows 7. There is also another way to access wireless networks using the Metro interface.</p>
+<p id="N105E7" lang="">First, open the Charms menu on the right of the screen (or use the keyboard command Windows key (<img id="_i_3" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image8.png"/>) + C) and click on the Settings icon.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of a Windows 8.1 Desktop screen. On the upper left, there is an image of a trash can labeled Recycle Bin. There is a Taskbar at the bottom with several icons on the left end of the taskbar, and the Quick Launch tray is displayed on the right. There is a menu open on the right with a list of icons and text next to each icon." class="popimg" id="_i_4" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image9.png" title="Image of a Windows 8.1 Desktop screen. On the upper left, there is an image of a trash can labeled Recycle Bin. There is a Taskbar at the bottom with several icons on the left end of the taskbar, and the Quick Launch tray is displayed on the right. There is a menu open on the right with a list of icons and text next to each icon." width="800"/></span>
+<p id="N105F4" lang="">Windows 8 Desktop with the Charms menu open showing the Settings icon.</p>
+</div>
+<p id="N105F7" lang="">Next, click on the Wi-Fi icon that appears in the Settings menu.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of the Settings pop-up menu. There are six white icons with white text on a gray background." class="popimg" id="_i_5" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image10.png" title="Image of the Settings pop-up menu. There are six white icons with white text on a gray background."/></span>
+<p id="N105FF" lang="">Settings pop-up menu.</p>
+</div>
+<p id="N10602" lang="">Clicking on the Wi-Fi icon brings up a list of available wireless networks, along with a status indicator showing the strength of the signal for each network. Click on the name of the network to which you would like to connect. If you don’t see your desired network, make sure that you’re close enough to the router for your computer to receive the wireless signal.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of the Windows Networks settings menu. There is text on the screen showing settings with switches, and text listing available networks. There is a button labeled Connect. There is a checkbox labeled “Connect automatically.”" class="popimg" id="_i_6" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image11.png" title="Image of the Windows Networks settings menu. There is text on the screen showing settings with switches, and text listing available networks. There is a button labeled Connect. There is a checkbox labeled “Connect automatically.”"/></span>
+<p id="N1060A" lang="">List of available networks.</p>
+</div>
+<p id="N1060D" lang="">Finally, enter the password or security key for the network.</p>
+<div class="imagewrap"><span class="image"><img alt="Image of the Windows Networks security key entry box. There is text on the screen with the name of a network. There is a text input box for the user to enter a password, and two buttons labeled Next and Cancel below the text input box." class="popimg" id="_i_7" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image12.png" title="Image of the Windows Networks security key entry box. There is text on the screen with the name of a network. There is a text input box for the user to enter a password, and two buttons labeled Next and Cancel below the text input box."/></span>
+<p id="N10615" lang="">Entering the password for the wireless network.</p>
+<p lang=""><strong>Tips for Accessing Wireless Networks</strong></p>
+</div>
+</div>
+</div>
+<div class="section" id="tips">
+<div class="sectionContain">
+<p id="N10622" lang="">If you’re trying to connect to a wireless network from a laptop computer, you should ensure that the wireless card is enabled. Some computers allow the user to turn off the wireless card when not in use to conserve battery power. Toggling the wireless card on and off in these cases is typically achieved using a function (Fn) key shortcut. See the manufacturer’s instructions for details pertaining to your specific laptop.</p>
+<p id="N10625" lang="">Increasingly, free wireless access is offered by airports, cafes, and retailers as a courtesy. These are open, unsecured networks. Remember that any online login information, such as connecting to a bank, email, Facebook, or Twitter, is susceptible to capture by anyone nearby. Thus, care should be taken when using a free public wireless network that you do not log into your sites unless you have added a virtual private network (VPN) through a third-party Internet security suite or from your antivirus program.</p>
+<p id="N10628" lang="">For networks that you connect to frequently, you can click the "Connect automatically" box so that your computer will automatically connect to the network whenever you are in range. This will prevent you from having to choose the network and enter the password every time you want to connect.</p>
+</div>
+</div>
+</div>
+</div>
+</div><br />pcs17無線網路 (p.74~p.77) << <a href='pcs17無線網路 (p.74~p.77).html'>Previous</a> <a href='pcs18有線網路安全 (p.78~p.80).html'>Next</a> >> pcs18有線網路安全 (p.78~p.80)</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
