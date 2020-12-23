@@ -1,0 +1,329 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cp2020</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923125 cp2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923125 cp2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Hint.html'>Hint</a><ul class='dropdown'><li><a href='gitlab-ci.yml.html'>gitlab-ci.yml</a></li></ul><li class='has-children'><a href='CMSiMDE.html'>CMSiMDE</a><ul class='dropdown'><li class='has-children'><a href='CMSiMDE 程式架構.html'>CMSiMDE 程式架構</a><ul class='dropdown'><li><a href='為何需要網際內容管理.html'>為何需要網際內容管理</a><li><a href='如何建立 CMSiMDE 子模組.html'>如何建立 CMSiMDE 子模組</a><li><a href='為何需要以子模組的設計.html'>為何需要以子模組的設計</a><li><a href='兩種不同的 git clone.html'>兩種不同的 git clone</a><li><a href='假如 CMSiMDE 不設為子模組.html'>假如 CMSiMDE 不設為子模組</a><li><a href='為何需要有動態網頁與靜態網頁.html'>為何需要有動態網頁與靜態網頁</a><li><a href='CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果.html'>CMSiMDE 有甚麼使用上的限制嗎比方說能夠使用那些特殊符號, 為什麼不能使用分號, 以及所謂的標題有沒有最多幾個字元的限制, 另外就是假如標題過長, 會發生甚麼狀況與後果</a></li></li></ul></ul><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li class='has-children'><a href='PC Hardware.html'>PC Hardware</a><ul class='dropdown'><li><a href='pch8冷卻 (p.73〜p.75).html'>pch8冷卻 (p.73〜p.75)</a><li><a href='pch8Cooling (p.73〜p.75).html'>pch8Cooling (p.73〜p.75)</a><li><a href='pch9網路概述（p.76〜p.79）.html'>pch9網路概述（p.76〜p.79）</a><li><a href='pch9Networking Overview（p.76〜p.79）.html'>pch9Networking Overview（p.76〜p.79）</a><li><a href='pch10網路設備 (p.80~p.82).html'>pch10網路設備 (p.80~p.82)</a><li><a href='pch10Networking Hardware (p.80~p.82).html'>pch10Networking Hardware (p.80~p.82)</a><li><a href='pch11網路媒體 (p.83 p.84).html'>pch11網路媒體 (p.83 p.84)</a><li><a href='pch11Networking Media (p.83 p.84).html'>pch11Networking Media (p.83 p.84)</a></li></ul><li class='has-children'><a href='PC Software.html'>PC Software</a><ul class='dropdown'><li><a href='pcs17無線網路 (p.74~p.77).html'>pcs17無線網路 (p.74~p.77)</a><li><a href='pcs18有線網路安全 (p.78~p.80).html'>pcs18有線網路安全 (p.78~p.80)</a><li><a href='pcs19惡意軟件 (p.81~p.85).html'>pcs19惡意軟件 (p.81~p.85)</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">PC Software << <a href='PC Software.html'>Previous</a> <a href='pcs18有線網路安全 (p.78~p.80).html'>Next</a> >> pcs18有線網路安全 (p.78~p.80)<br /><h1>pcs17無線網路 (p.74~p.77)</h1>
+<p><strong>無線網路安全</strong></p>
+<div class="section" id="N105A7">
+<div class="sectionContain">
+<p id="N105AE" lang=""><span>設置無線網絡時，<span style="color: #ff0000;">無線安全性</span>非常重要。沒有安全性，任何人都可以訪問文件和文件夾，查看所有無線傳輸，<span style="color: #ff0000;">介紹自己的惡意軟件</span>，使用您的無線連接<span style="color: #ff0000;">訪問非法內容</span>或<span style="color: #ff0000;">通過ISP發起攻擊</span>或<span style="color: #ff0000;">下載有害內容</span>。</span></p>
+<p id="N105B1" lang=""><span>無線網絡通過使用<span style="color: #ff0000;">無線電頻率</span>將<span style="color: #ff0000;">空氣</span>用作其<span style="color: #ff0000;">傳輸介質</span>。這意味著介質是不安全的，因為如果不使用加密和密碼，則<span style="color: #ff0000;">距離限制內的任何用戶都可以訪問無線網絡</span>。</span></p>
+<p id="N105B4" lang=""><span>有四個簡單的步驟來保護接入點：</span></p>
+<p id="N105B7" lang=""><span>1.鎖定路由器或接入點。</span></p>
+<p id="N105BA" lang=""><span>2.配置<span style="color: #ff0000;">服務集標識符（SSID）</span>，並<span style="color: #ff0000;">禁用SSID廣播</span>。</span></p>
+<p id="N105BD" lang=""><span>3.配置無線安全性。</span></p>
+<p id="N105C0" lang=""><span>4.通過<span style="color: #ff0000;">媒體訪問控制（MAC）地址限制用戶</span>。</span></p>
+<p lang=""><strong>鎖定訪問點和訪問</strong></p>
+</div>
+</div>
+<div class="section" id="N105C5">
+<div class="sectionContain">
+<p id="N105CC" lang=""><span><span>有幾種鎖定訪問點的方法。你</span><span>使用的方法越多，網絡將越安全。你</span><span>可以通過將默認密碼更改為強密碼來鎖定接入點或路由器。你</span><span>還可以通過<span style="color: #ff0000;">禁用無線Web訪問</span>來鎖定係統，以便只有直接連接的計算機才能管理該設備。你</span><span>可以<span style="color: #ff0000;">禁用遠程管理</span>，以便<span style="color: #ff0000;">無法通過Internet訪問設備</span>。你</span><span>只能允許通過更安全的<span style="color: #ff0000;">安全超文本傳輸協議（HTTPS）</span>訪問。</span><span>最後，您可以<span style="color: #ff0000;">禁用通用即插即用功能</span>。</span></span></p>
+<p id="N105CF" lang=""><span><span>此外，你應該通過<span style="color: #ff0000;">更改網絡的默認IP地址</span>來更改網絡訪問權限。</span><span>最好限制通過<span style="color: #ff0000;">動態主機配置協議（DHCP）可用的地址數量</span>。</span><span>您可以<span style="color: #ff0000;">更改默認的SSID</span>，並<span style="color: #ff0000;">禁用其廣播</span>，以便用戶在連接前必須知道它是什麼。</span></span></p>
+<div class="image shouldbeleft"><img alt="兩個屏幕的圖像顯示了通用路由器設置可用的選項。 頂部屏幕標記為Setup，頂部具有五個選項卡。 選擇設置選項卡，並用藍色條突出顯示。 然後，屏幕上的三個區域用橙色條突出顯示：Internet（WAN）設置，網絡（LAN）設置和時間設置。 所有部分都有文本輸入框。 在頂部，還有一個下拉菜單。 在中間部分有兩個晶體管按鈕，在底部有一個複選框。 底部有兩個按鈕：“保存設置”和“頻道更改”。 底部的屏幕標記為Wireless，頂部具有五個選項卡。 無線選項卡被選中並用藍色條突出顯示。 然後，屏幕上有三個區域用橙色條突出顯示：配置，2.4 GHz設置和5 GHz設置。 在頂部  有兩個晶體管按鈕。 在中部和底部都有兩個晶體管按鈕和文本輸入框。 底部有兩個按鈕：“保存設置”和“頻道更改”。" class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image1.png" title="兩個屏幕的圖像顯示了通用路由器設置可用的選項。 頂部屏幕標記為Setup，頂部具有五個選項卡。 選擇設置選項卡，並用藍色條突出顯示。 然後，屏幕上的三個區域用橙色條突出顯示：Internet（WAN）設置，網絡（LAN）設置和時間設置。 所有部分都有文本輸入框。 在頂部，還有一個下拉菜單。 在中間部分有兩個晶體管按鈕，在底部有一個複選框。 底部有兩個按鈕：“保存設置”和“頻道更改”。 底部的屏幕標記為Wireless，頂部具有五個選項卡。 無線選項卡被選中並用藍色條突出顯示。 然後，屏幕上有三個區域用橙色條突出顯示：配置，2.4 GHz設置和5 GHz設置。 在頂部  有兩個晶體管按鈕。 在中部和底部都有兩個晶體管按鈕和文本輸入框。 底部有兩個按鈕：“保存設置”和“頻道更改”。"/></div>
+<div class="imagewrap"><span class="image"><img alt="兩個屏幕的圖像顯示了通用路由器設置可用的選項。 頂部屏幕標記為Setup，頂部具有五個選項卡。 選擇設置選項卡，並用藍色條突出顯示。 然後，屏幕上的三個區域用橙色條突出顯示：Internet（WAN）設置，網絡（LAN）設置和時間設置。 所有部分都有文本輸入框。 在頂部，還有一個下拉菜單。 在中間部分有兩個晶體管按鈕，在底部有一個複選框。 底部有兩個按鈕：“保存設置”和“頻道更改”。 底部的屏幕標記為Wireless，頂部具有五個選項卡。 無線選項卡被選中並用藍色條突出顯示。 然後，屏幕上有三個區域用橙色條突出顯示：配置，2.4 GHz設置和5 GHz設置。 在頂部  有兩個晶體管按鈕。 在中部和底部都有兩個晶體管按鈕和文本輸入框。 底部有兩個按鈕：“保存設置”和“頻道更改”。" class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image2.png" title="兩個屏幕的圖像顯示了通用路由器設置可用的選項。 頂部屏幕標記為Setup，頂部具有五個選項卡。 選擇設置選項卡，並用藍色條突出顯示。 然後，屏幕上的三個區域用橙色條突出顯示：Internet（WAN）設置，網絡（LAN）設置和時間設置。 所有部分都有文本輸入框。 在頂部，還有一個下拉菜單。 在中間部分有兩個晶體管按鈕，在底部有一個複選框。 底部有兩個按鈕：“保存設置”和“頻道更改”。 底部的屏幕標記為Wireless，頂部具有五個選項卡。 無線選項卡被選中並用藍色條突出顯示。 然後，屏幕上有三個區域用橙色條突出顯示：配置，2.4 GHz設置和5 GHz設置。 在頂部  有兩個晶體管按鈕。 在中部和底部都有兩個晶體管按鈕和文本輸入框。 底部有兩個按鈕：“保存設置”和“頻道更改”。"/></span>
+<p id="N105DC" lang=""><span><span>屏幕顯示可用於通用路由器設置的選項。</span><span>國家信息安全和地理空間技術聯盟（NISGTC）根據CC-BY許可使用的圖像。</span></span></p>
+<p lang=""><strong>SSID —服務集標識符</strong></p>
+</div>
+</div>
+</div>
+<div class="section" id="N105E1">
+<div class="sectionContain">
+<p id="N105E8" lang=""><span><span>保護無線網絡的一種方法是<span style="color: #ff0000;">禁用SSID的廣播</span>。</span><span>SSID或服務集標識符實質上是無線網絡的名稱。</span><span>為了保護無線網絡，您應該首先將SSID<span style="color: #ff0000;">更改為默認值以外的其他值</span>。</span><span>如果用戶看到默認的SSID，則通常可以假定無線訪問點上沒有管理密碼。</span><span>因此，接入點成為攻擊的目標。</span><span>另外，如果在同一區域中有多個接入點，並且它們都具有默認名稱，則很難確定哪個接入點屬於哪個網絡。</span><span>更改默認的SSID時，<span style="color: #ff0000;">請勿使用您的姓氏</span>，<span style="color: #ff0000;">公司名稱或位置</span>，因為這會使您的接入點成為可用於你並以你的網絡為目標的信息源。</span><span>配置完所有無線客戶端后，最好禁用SSID廣播。</span><span>這將防止訪問點宣布其在該區域中的存在。</span><span>一旦禁用了SSID廣播，用戶將無法再找到其可用網絡中顯示的無線網絡，除非他們先前已連接到該無線網絡。</span><span>這意味著即使您的客戶端計算機不廣播，也必須將其設置為連接到網絡。</span></span></p>
+<p lang=""><strong>Wi-Fi保護訪問</strong></p>
+</div>
+</div>
+<div class="section" id="N105ED">
+<div class="sectionContain">
+<p id="N105F4" lang=""><span><span>由於Wi-Fi會通過<span style="color: #ff0000;">射頻傳輸</span>，因此傳輸的數據很容易被其他任何無線電接收器查看和捕獲。</span><span>加密和網絡安全已成為各級IT專業人員最關心的問題。</span><span>如果建立了<span style="color: #ff0000;">未加密的Wi-Fi網絡</span>，則它是“<span style="color: #ff0000;">開放的</span>”，附近有數據包嗅探軟件的任何人都可以捕獲主機與無線訪問點之間的傳輸。</span><span>提供開放式訪問權限的公共咖啡館和零售商這樣做是出於禮貌，但用戶必須注意，任何在線登錄信息（例如，連接到銀行，Facebook或Twitter）都不安全且容易被捕獲。</span><span>準技術人員必須了解當前的加密類型和最佳做法，以<span style="color: #ff0000;">保護WLAN</span>。</span></span></p>
+<p lang=""><strong>加密類型</strong></p>
+</div>
+</div>
+<div class="section" id="N105F9">
+<div class="sectionContain">
+<p id="N10600" lang=""><span><span>為了提供無線網絡的安全性，<span style="color: #ff0000;">802.11標準</span>提供了三種主要的密碼保護/加密類型：</span></span></p>
+<p lang=""><span><span>1.有線等效保密（<span style="color: #ff0000;">WEP</span>）</span></span></p>
+<p lang=""><span><span>2.Wi-Fi保護訪問（<span style="color: #ff0000;">WPA</span>）</span></span></p>
+<p lang=""><span><span>3.Wi-Fi保護訪問2（<span style="color: #ff0000;">WPA2</span>）。</span></span></p>
+<p lang=""><strong>有線等效保密（WEP）</strong></p>
+</div>
+</div>
+<div class="section" id="wep">
+<div class="sectionContain">
+<p id="N1060D" lang=""><span><span>在最初的802.11標準中，唯一提供的安全性是<span style="color: #ff0000;">WEP</span>，當時它聲稱與有線網絡連接一樣安全。</span><span>通過使用所有接入點和客戶端設備都將使用的<span style="color: #ff0000;">40位WEP預共享密鑰（PSK）</span>進行加密來保護此無線連接。</span><span>這種對稱加密是一個好主意，但是由於<span style="color: #ff0000;">密鑰太小（40位）</span>，攻擊者很快就將其破壞了。</span></span></p>
+<p id="N10610" lang=""><span><span>為了解決這個問題，WEP開始使用<span style="color: #ff0000;">64位密鑰</span>，並且可以支持最<span style="color: #ff0000;">多128位的密鑰</span>，這將提供更強大的加密。</span><span>不幸的是，用於加密的WEP算法還依賴於將<span style="color: #ff0000;">初始化向量（IV）與PSK結合使用來創建加密</span>，並且IV僅使用24位來創建，這意味著只有16777216個可能值。</span><span>這種有限的組合值意味著IV將最終（在五到七個小時內）開始重複，並且捕獲數據包的攻擊者可以獲得具有相同IV的兩個。</span><span>這稱為密鑰流或IV攻擊。</span><span>存在許多開源實用程序，這些實用程序可以在短短幾分鐘內在現代硬件上<span style="color: #ff0000;">破解WEP密碼</span>。</span><span>因此，WEP是不安全的，永遠不要在您的網絡中使用。</span></span></p>
+<p lang=""><strong>Wi-Fi保護訪問（WPA）</strong></p>
+</div>
+</div>
+<div class="section" id="N10615">
+<div class="sectionContain">
+<p id="N1061C" lang=""><span><span>電氣和電子工程師協會（IEEE）與Wi-Fi聯盟合作</span></span><span><span>，開始開發針對WEP缺點的解決方案。</span><span>在2003年，Wi-Fi聯盟發布了<span style="color: #ff0000;">WPA標準</span>，以替代目前不安全的WEP。</span><span>WPA基於相同的</span></span><a aria-describedby="N10624" class="extra" id=""></a><span><span>Rivest Cipher 4（RC4）流密碼</span></span><span><span>構建，<span> </span></span><span>但使用48位IV代替WEP的24位IV。</span><span>此升級的<span style="color: #ff0000;">IV使用臨時密鑰完整性協議（TKIP）</span>。</span><span>TKIP是IEEE標準，指在使用每個數據包的128位動態加密密鑰提供更安全的加密。</span><span>TKIP是一套算法，</span></span><span><span>旨在作為客戶端WLAN網絡接口卡（NIC）的固件升級，但不一定是2003年前製造的接入點。TKIP會對每個數據進行加密</span></span><a href="http://searchnetworking.techtarget.com/definition/packet" id="_i_4" lang="" target="_blank"><span></span></a><span><span>帶有唯一加密密鑰的數據包</span></span><span><span>，並且由於128位長度，該密鑰比WEP強得多。</span><span>為了增強按鍵強度，TKIP包括四個附加算法。</span></span></p>
+<p id="N10639" lang=""><span><span>除了TKIP，WPA標準還使用<span style="color: #ff0000;">消息完整性檢查（MIC）</span>來確認數據在傳輸過程中沒有被修改，這</span><span><span> </span>與WEP中使用</span><span>的</span></span><a aria-describedby="N1063C" class="extra" id=""></a><span style="color: #ff0000;">循環冗餘校驗（CRC）</span><span><span style="color: #ff0000;"><span style="color: #000000;">相反</span> </span><span>。</span><span>MIC使用“<span style="color: #ff0000;">哈希</span>”來驗證消息是否未被更改。</span><span>WPA支持PSK模式和企業模式。</span><span>在企業模式下，要求用戶在交換密鑰之前進行身份驗證，並且客戶端和訪問點之間的每個密鑰只是臨時的，從而減少了洩露的機會。</span><span>不幸的是，WPA還存在著<span style="color: #ff0000;">密碼短語</span>和<span style="color: #ff0000;">PSK密鑰</span>管理方面的安全漏洞，現在也被認為是不安全的。</span></span></p>
+<p lang=""><strong>Wi-Fi保護訪問2（WPA2）</strong></p>
+</div>
+</div>
+<div class="section" id="N10644">
+<div class="sectionContain">
+<p id="N1064B" lang=""><span><span>Wi-Fi保護訪問版本2（WPA2）由於24位和48位初始化向量的不安全性而替代了WEP和WPA。</span><span>IEEE在2004年將WPA2批准為802.11i。WPA2需要使用</span></span><a aria-describedby="N1064E" class="extra" id=""></a><span><span>計數器模式密碼塊鏈接消息身份驗證代碼協議（CCMP）進行</span></span><span><span>更強的加密和完整性檢查<span> </span></span><span>。</span><span>WPA2支持預共享密鑰和較早的802.1x標準，但它指定了最安全的高級加密標準（AES）。</span><span>AES可以使用128位，192位或256位密鑰，並且與全世界以及美國政府用於保護機密網絡的算法相同。</span></span></p>
+<p id="N10654" lang=""><span><span>使用WPA2可以創建安全的無線網絡，但前提是要<span style="color: #ff0000;">使用良好的密碼和共享密鑰</span>。</span><span>WPA2還支持用於集中式用戶身份驗證的企業模式（用於公司網絡）和用於PSK支持的個人模式（用於大多數家庭和小型辦公室）。</span><span>使用WPA2進行安全保護的關鍵是強大的密碼，因為當前侵入WPA2網絡的方法是使用<span> </span></span></span><a aria-describedby="N10657" class="extra" id=""></a><span><span>蠻力攻擊</span></span><span><span><span> </span>針對PSK。</span><span>最小密碼為8個字符，最大密碼為63個字符。</span><span>遵循強密碼協議，不使用標準詞典單詞，並且混合使用大小寫字母，數字和符號，理想的密碼長度為12-16個字符。</span><span>如果密鑰又長又復雜，攻擊者將無法穿透您的WPA2無線網絡。</span></span></p>
+<p lang=""><strong>Wi-Fi保護訪問2企業</strong></p>
+</div>
+</div>
+<div class="section" id="N10664">
+<div class="sectionContain">
+<p id="N1066B" lang=""><span><span>WPA2企業版是使用大型企業網絡中使用的<span style="color: #ff0000;">遠程身份驗證撥入用戶服務（RADIUS）協議</span>的客戶端/服務器模型。</span><span>RADIUS服務器使用<span style="color: #ff0000;">UDP（用戶數據報協議）</span>作為傳輸方法在應用程序層中運行，通常是在<span style="color: #ff0000;">UNIX或Windows服務器</span>上運行的軟件後台服務。</span><span>WPA2企業消除了共享密鑰，並將其替換為用戶名和密碼以連接到公司的Wi-Fi網絡。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="屏幕圖像顯示無線安全設置。 在頂部，無線安全性顯示在黑色欄中。 右邊是帶有文本的下拉菜單。 WPA2個人已選擇。 在底部，Wireless Security再次顯示在黑色欄中，在右側，有兩個帶有文本的下拉菜單和兩個文本輸入字段。" class="popimg" id="_i_7" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image3.png" title="屏幕圖像顯示無線安全設置。 在頂部，無線安全性顯示在黑色欄中。 右邊是帶有文本的下拉菜單。 WPA2個人已選擇。 在底部，Wireless Security再次顯示在黑色欄中，在右側，有兩個帶有文本的下拉菜單和兩個文本輸入字段。"/></span>
+<p id="N10673" lang=""><span><span>屏幕顯示無線安全設置。</span><span>國家信息安全和地理空間技術聯盟（NISGTC）根據CC-BY許可使用的圖像。</span></span></p>
+<p lang=""><strong>媒體訪問控制（MAC）過濾</strong></p>
+<p id="N105AC" lang=""><span>MAC過濾是保護網絡（有線和無線）的另一種方法。MAC過濾依賴於<span style="color: #ff0000;">網絡接口卡（NIC）的第2層地址</span>。MAC地址是製造商分別分配給每個網絡接口卡的48位地址，前24位標識製造商，後24位標識特定的單個網絡接口卡。通過創建特定MAC地址的<span style="color: #ff0000;">白名單（允許）</span>或<span style="color: #ff0000;">黑名單（拒絕）</span>，在無線訪問點或無線路由器上配置MAC過濾。最好讓所有設備先連接到接入點，這樣它們的MAC地址就會<span style="color: #ff0000;">自動</span>出現在列表中，而<span style="color: #ff0000;">不必手動輸入</span>。請注意，不是通過MAC地址來識別人員，而是通過他們的設備來識別，因此重要的是，通過其他方式保持設備的安全。MAC過濾是整體安全解決方案的一部分，而不是其本身的解決方案。</span></p>
+<div class="imagewrap"><span class="image"><img alt="屏幕圖像顯示無線路由器上的MAC過濾。 屏幕標題為MAC地址過濾器列表，為藍色文本。 頂部有一個標有“無線客戶端MAC列表”的按鈕。 文本輸入框有兩列，每個框的左側都有MAC地址。 屏幕在底部被切斷。" class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image4.png" title="屏幕圖像顯示無線路由器上的MAC過濾。 屏幕標題為MAC地址過濾器列表，為藍色文本。 頂部有一個標有“無線客戶端MAC列表”的按鈕。 文本輸入框有兩列，每個框的左側都有MAC地址。 屏幕在底部被切斷。"/></span>
+<p id="N105B4" lang=""><span><span>屏幕顯示無線路由器上的MAC過濾。</span><span>國家信息安全和地理空間技術聯盟（NISGTC）根據CC-BY許可使用的圖像。</span></span></p>
+<p lang=""><strong>其他無線安全方法</strong></p>
+</div>
+<div class="section" id="N105B7">
+<div class="sectionContain">
+<p id="N105BE" lang=""><span><span>通過選擇靜態IP地址與動態IP地址，還可以增強無線安全性。</span><span>通過使用靜態地址，必須為子網，網關和DNS服務器手動配置每個客戶端，這對於無線網絡來說是一個更安全的選擇。</span><span>相反，可以使用動態方案，其中使用DHCP服務器自動分配地址。</span><span>儘管這可以通過使用自動配置來簡化設置，但是如果惡意用戶連接到網絡，那麼如果不採取其他步驟（例如，MAC過濾，使用WPA2 AES密碼和更改默認設置），也會自動配置他們。</span></span></p>
+<p id="N105C1" lang=""><span><span>在小型辦公室/家庭辦公室（SOHO）網絡中，如果您有固定數量的計算機，則手動配置IP地址可能很有價值。</span><span>但是，隨著蜂窩設備和其他小型個人計算設備的普及，與使用DHCP相比，訪問網絡難以管理並且實用性大大降低。</span><span>在網絡中使用DHCP時，可以最大程度地減少可用的DHCP地址的數量，以防止惡意用戶對網絡的不必要使用。</span><span>此外，當今大多數SOHO路由器都包含一個來賓網絡，該網絡將允許用戶僅訪問您在路由器上配置的服務（通常是Internet，但不能訪問LAN）。</span></span></p>
+<p id="N105C4" lang=""><span><span>最後，您需要牢記接入點的位置，以實現有效而安全的覆蓋。</span><span>如果使用多個接入點，則必須計劃防止這些接入點相互干擾。</span><span>這是通過使用遠距離通道在邏輯上將它們分開來防止重疊來完成的。</span><span>另外，您應確保將接入點無線電的功率電平設置得足夠低，以使其信號保持在建築物內，但又要足夠高，以在整個區域內提供完整的覆蓋範圍。</span><span>如果您的信號太強，惡意用戶可能會劫持來自停車場或馬路對面的無線信號。</span><span>這就是所謂的“ wardriving”。</span></span></p>
+<p lang=""><strong>通過WiFi訪問網絡</strong></p>
+<p id="N105A4" lang=""><span>從Windows計算機訪問無線網絡非常簡單，但是與我們討論的許多其他功能一樣，該過程在Windows Vista和Windows 7中相似，但在Windows 8.1和Windows 10中有所不同。</span></p>
+<p id="N105A7" lang=""><span><span>要訪問無線網絡，您需要兩條信息：</span></span></p>
+<ul lang="">
+<li lang=""><span><span>網絡名稱（SSID）。</span></span></li>
+<li lang=""><span><span>網絡的密碼（安全密鑰）。</span></span></li>
+</ul>
+<div class="section" id="N105B3">
+<div class="sectionContain">
+<p lang=""><strong>Windows Vista和Windows 7</strong></p>
+<p id="N105BA" lang=""><span><span>在Windows Vista或Windows 7中，訪問網絡的最簡單方法是使用桌面右下角系統托盤中的Wi-Fi圖標。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="Windows桌面右下角的圖像，顯示Windows任務欄。 有一個黑色的欄，左側有“桌面”一詞，幾個圖標，以及一個顯示時間的數字時鐘。" class="popimg" id="_i_0" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image5.png" title="Windows桌面右下角的圖像，顯示Windows任務欄。 有一個黑色的欄，左側有“桌面”一詞，幾個圖標，以及一個顯示時間的數字時鐘。"/></span>
+<p id="N105C2" lang=""><span><span>Windows任務欄的屏幕快照，在系統任務欄中顯示Wi-Fi圖標。</span></span></p>
+</div>
+<p id="N105C5" lang=""><span><span>單擊Wi-Fi圖標將顯示可用的無線網絡列表，以及一個狀態指示器，該指示器顯示每個網絡的信號強度。</span><span>單擊您要連接的網絡的名稱。</span><span>如果看不到所需的網絡，請確保距離路由器足夠近，以便計算機可以接收無線信號。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="Windows桌面右下角的圖像，顯示Windows任務欄。 有一個黑色的欄，左側有“桌面”一詞，幾個圖標，以及一個顯示時間的數字時鐘。 任務欄上方是一個顯示可用無線網絡列表的窗口。" class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image6.png" title="Windows桌面右下角的圖像，顯示Windows任務欄。 有一個黑色的欄，左側有“桌面”一詞，幾個圖標，以及一個顯示時間的數字時鐘。 任務欄上方是一個顯示可用無線網絡列表的窗口。"/></span>
+<p id="N105CD" lang=""><span><span>可用網絡列表。</span></span></p>
+</div>
+<p id="N105D0" lang=""><span><span>最後，輸入網絡的密碼或安全密鑰。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="Windows桌面右下角的圖像，顯示Windows任務欄。 有一個黑色的欄，左側有單詞“ Desktop”，幾個圖標，還有一個顯示時間的數字時鐘。 任務欄上方是一個帶有頂部文本的窗口，一個文本輸入框，一個複選框以及兩個標記為“確定”和“取消”的按鈕。" class="popimg" id="_i_2" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image7.png" title="Windows桌面右下角的圖像，顯示Windows任務欄。 有一個黑色的欄，左側有單詞“ Desktop”，幾個圖標，還有一個顯示時間的數字時鐘。 任務欄上方是一個帶有頂部文本的窗口，一個文本輸入框，一個複選框以及兩個標記為“確定”和“取消”的按鈕。"/></span>
+<p id="N105D8" lang=""><span><span>輸入無線網絡密碼。</span></span></p>
+<p lang=""><strong>Windows 8.1</strong></p>
+</div>
+</div>
+</div>
+<div class="section" id="N105DD">
+<div class="sectionContain">
+<p id="N105E4" lang=""><span><span>在Windows 8.1中，就像在Windows Vista或Windows 7中一樣，如果您在Windows桌面中，則可以使用Wi-Fi圖標。還有另一種使用Metro界面訪問無線網絡的方法。</span></span></p>
+<p id="N105E7" lang=""><span><span>首先，打開屏幕右側的超級按鈕菜單（或使用鍵盤命令Windows鍵（</span></span><img id="_i_3" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image8.png"/><span><span>）+ C），然後單擊“設置”圖標。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="Windows 8.1桌面屏幕的圖像。 左上方有一個標有“回收站”的垃圾桶的圖像。 底部有一個任務欄，在任務欄的左端有幾個圖標，並且在右側顯示了快速啟動托盤。 右側打開一個菜單，每個圖標旁邊都有一個圖標和文本列表。" class="popimg" id="_i_4" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image9.png" title="Windows 8.1桌面屏幕的圖像。 左上方有一個標有“回收站”的垃圾桶的圖像。 底部有一個任務欄，在任務欄的左端有幾個圖標，並且在右側顯示了快速啟動托盤。 右側打開一個菜單，每個圖標旁邊都有一個圖標和文本列表。" width="800"/></span>
+<p id="N105F4" lang=""><span><span>Windows 8桌面打開了超級按鈕，顯示“設置”圖標。</span></span></p>
+</div>
+<p id="N105F7" lang=""><span><span>接下來，單擊“設置”菜單中顯示的Wi-Fi圖標。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="設置彈出菜單的圖像。 在灰色的背景上有六個帶有白色文本的白色圖標。" class="popimg" id="_i_5" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image10.png" title="設置彈出菜單的圖像。 在灰色的背景上有六個帶有白色文本的白色圖標。"/></span>
+<p id="N105FF" lang=""><span><span>設置彈出菜單。</span></span></p>
+</div>
+<p id="N10602" lang=""><span><span>單擊Wi-Fi圖標將顯示可用的無線網絡列表，以及一個狀態指示器，該指示器顯示每個網絡的信號強度。</span><span>單擊您要連接的網絡的名稱。</span><span>如果看不到所需的網絡，請確保距離路由器足夠近，以便計算機可以接收無線信號。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="Windows網絡設置菜單的圖像。 屏幕上顯示文本，顯示帶有開關的設置，文本列出可用的網絡。 有一個標記為“連接”的按鈕。 有一個標記為“自動連接”的複選框。" class="popimg" id="_i_6" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image11.png" title="Windows網絡設置菜單的圖像。 屏幕上顯示文本，顯示帶有開關的設置，文本列出可用的網絡。 有一個標記為“連接”的按鈕。 有一個標記為“自動連接”的複選框。"/></span>
+<p id="N1060A" lang=""><span><span>可用網絡列表。</span></span></p>
+</div>
+<p id="N1060D" lang=""><span><span>最後，輸入網絡的密碼或安全密鑰。</span></span></p>
+<div class="imagewrap"><span class="image"><img alt="Windows網絡安全密鑰輸入框的圖像。 屏幕上有網絡名稱的文本。 有一個文本輸入框供用戶輸入密碼，在文本輸入框下方有兩個標記為“下一步”和“取消”的按鈕。" class="popimg" id="_i_7" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d824e08a0a0001dc23651919041a0b35/PCS17/webcontent/PCS17/image12.png" title="Windows網絡安全密鑰輸入框的圖像。 屏幕上有網絡名稱的文本。 有一個文本輸入框供用戶輸入密碼，在文本輸入框下方有兩個標記為“下一步”和“取消”的按鈕。"/></span>
+<p id="N10615" lang=""><span><span>輸入無線網絡的密碼。</span></span></p>
+<p lang=""><strong>訪問無線網絡的提示</strong></p>
+</div>
+</div>
+</div>
+<div class="section" id="tips">
+<div class="sectionContain">
+<p id="N10622" lang=""><span><span>如果嘗試從便攜式計算機連接到無線網絡，則應確保已啟用無線卡。</span><span>某些計算機允許用戶在不使用時關閉無線卡，以節省電池電量。</span><span>在這種情況下，通常使用功能（Fn）鍵快捷方式來打開和關閉無線卡。</span><span>有關特定筆記本電腦的詳細信息，請參閱製造商的說明。</span></span></p>
+<p id="N10625" lang=""><span><span>機場，咖啡廳和零售商越來越有禮貌地提供免費無線訪問。</span><span>這些是開放的，不安全的網絡。</span><span>請記住，附近的任何人都容易捕獲任何在線登錄信息，例如連接到銀行，電子郵件，Facebook或Twitter。</span><span>因此，在使用免費的公共無線網絡時，除非您已通過第三方Internet安全套件或從防病毒程序添加了虛擬專用網絡（VPN），否則請不要登錄您的站點。</span></span></p>
+<p id="N10628" lang=""><span><span>對於經常連接的網絡，可以單擊“自動連接”框，這樣只要您在範圍內，計算機就會自動連接到網絡。</span><span>這樣可以避免您每次選擇連接時都必須選擇網絡並輸入密碼。</span></span></p>
+<p lang=""><span><span></span></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />PC Software << <a href='PC Software.html'>Previous</a> <a href='pcs18有線網路安全 (p.78~p.80).html'>Next</a> >> pcs18有線網路安全 (p.78~p.80)</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
