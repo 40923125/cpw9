@@ -133,12 +133,48 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">為何需要以子模組的設計 << <a href='為何需要以子模組的設計.html'>Previous</a> <a href='假如 CMSiMDE 不設為子模組.html'>Next</a> >> 假如 CMSiMDE 不設為子模組<br /><h1>兩種不同的 git clone</h1>
-<p>git clone <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a></p>
-<p>表示要將 cmsimde 倉儲的資料 clone 到近端, 針對沒有子模組設置的倉儲可以直接以 git clone 取下倉儲資料</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/cp2020.git">https://github.com/mdecourse/cp2020.git</a></p>
-<p>表示要將 cp2020 倉儲中包含個子模組與可能子模組中的子模組等資料, 全部 clone 到近端.</p>
-<br />為何需要以子模組的設計 << <a href='為何需要以子模組的設計.html'>Previous</a> <a href='假如 CMSiMDE 不設為子模組.html'>Next</a> >> 假如 CMSiMDE 不設為子模組</div>
+    <div id="tipue_search_content">21.寫入文件 << <a href='21.寫入文件.html'>Previous</a> <br /><h1>21.Write To A File</h1>
+<h4 id="exercise-21-and-solution"><strong>Exercise 21 (and <a href="https://www.practicepython.org/solution/2014/12/08/21-write-to-a-file-solutions.html">Solution</a>)</strong></h4>
+<p>Take the code from the<span> </span><a href="https://www.practicepython.org/exercise/2014/06/06/17-decode-a-web-page.html">How To Decode A Website</a><span> </span>exercise (if you didn’t do it or just want to play with some different code, use the code from the<span> </span><a href="https://www.practicepython.org/solution/2014/07/10/17-decode-a-web-page-solutions.html">solution</a>), and instead of printing the results to a screen, write the results to a txt file. In your code, just make up a name for the file you are saving to.</p>
+<p>Extras:</p>
+<ul>
+<li>Ask the user to specify the name of the output file that will be saved.</li>
+</ul>
+<h4 id="discussion">Discussion</h4>
+<p>Topics:</p>
+<ol>
+<li>Writing to a file</li>
+<li>Gotchas and warnings</li>
+</ol>
+<h4 id="saving-to-a-file">Saving to a file</h4>
+<p>Python makes it very easy to write to a file. Depending on what kind of file you want to write to and what kind of data you are writing, your options are plenty. I will show you the simplest form of writing to a file - writing plain text to a plain old text file. In other words, writing a string to a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file.</p>
+<p>The code looks like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_save.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+    <span class="n">open_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'A string to write'</span><span class="p">)</span></code></pre>
+</figure>
+<p>An alternate way of writing the same code is like so:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">open_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_save.txt'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span>
+  <span class="n">open_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">'A string to write'</span><span class="p">)</span>
+  <span class="n">open_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></code></pre>
+</figure>
+<p>The first is considered better programming practice, but the second might explain a little bit better what is going on in the first code sample.</p>
+<p>Let’s go through line by line.</p>
+<p>The<span> </span><code class="highlighter-rouge">with open('file_to_save.txt', 'w') as open_file</code><span> </span>syntax is new for us - all it means is that inside the code block indented underneath, there will be a variable called<span> </span><code class="highlighter-rouge">open_file</code><span> </span>that will represent the file object. You can pick any name for this file - it is just a variable name. The<span> </span><code class="highlighter-rouge">open()</code><span> </span>function takes two arguments - the first is the name of a file as a string (if the file does not exist, Python will create it), and a second argument that represents<span> </span><em>how</em><span> </span>the file should be opened. There are a few ways you can open files (read all about it<span> </span><a href="https://docs.python.org/3.3/tutorial/inputoutput.html#reading-and-writing-files">at the official Python documentation</a>), but in short, there are two most common ones:<span> </span><code class="highlighter-rouge">'r'</code><span> </span>and<span> </span><code class="highlighter-rouge">'w'</code>.<span> </span><code class="highlighter-rouge">'r'</code><span> </span>stands for “read only” and<span> </span><code class="highlighter-rouge">'w'</code><span> </span>stands for “write only” (you can open for both read and write using<span> </span><code class="highlighter-rouge">'r+'</code>). You should tell Python which way you want to open the file - you don’t want to modify a file you are only looking at, and opening a file with<span> </span><code class="highlighter-rouge">'w'</code><span> </span>when you want to only read it will overwrite the old file.</p>
+<p>When you open a file, it will look for it in the same directory as the Python program. If there is no file with that name, Python will create a file in that directory with the given name. To look for files in other directories, use the<span> </span><code class="highlighter-rouge">../</code><span> </span>notation to move up and down directories as necessary.</p>
+<p>As soon as the program exists the<span> </span><code class="highlighter-rouge">with</code><span> </span>code block for any reason, it will close the file. In the second code example case, I created the file object by opening the file and saving the object to my variable<span> </span><code class="highlighter-rouge">open_file</code>. I then had to remember to close the file manually at the end of my program. This is considered worse programming practice, because in case there is an error in the program and it terminates before hitting the<span> </span><code class="highlighter-rouge">.close()</code><span> </span>statement, there will be a floating open file object somewhere in memory. You do this enough times and it becomes a problem, especially for production environments. For playing around with Python, this is not usually a problem, but why not learn how to program correctly the first time?</p>
+<p>The<span> </span><code class="highlighter-rouge">write()</code><span> </span>portion is simple - call<span> </span><code class="highlighter-rouge">.write()</code><span> </span>with a string (if something is not a string, turn it into a string first), and it will write to the end of the file.</p>
+<p>When the program exists the<span> </span><code class="highlighter-rouge">with</code><span> </span>statement, the file will automatically be saved. In fact, every time after a<span> </span><code class="highlighter-rouge">.write()</code><span> </span>statement, the file will be automatically saved.</p>
+<h4 id="gotchas-and-warnings">Gotchas and Warnings</h4>
+<p>This all seems simple enough, but there are a few caveats to the file-writing endeavor.</p>
+<ol>
+<li>You always want to make sure you close a file. The easiest strategy for this is explained above - use the<span> </span><code class="highlighter-rouge">with</code><span> </span>statement rather than trying to manually remember to<span> </span><code class="highlighter-rouge">.close()</code><span> </span>the file.</li>
+<li>Opening a file for writing with<span> </span><code class="highlighter-rouge">'w'</code><span> </span>will overwrite any file that currently exists with that name. If you have previously written data to that file, it is now gone as soon as Python opens it.</li>
+<li>You can write<span> </span><em>any</em><span> </span>kind of object to any kind of file in Python, as long as you specify the correct format. The simplest thing to do is to write strings to a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file. But remember - you have to convert numbers or objects into strings before you write them to a file. In a later exercise, we’ll talk about writing to other formats.</li>
+</ol>
+<p>The best way to remember the caveats is to explore them yourself, so have at it!</p>
+<br/>22.<span>從文件讀取</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><br />21.寫入文件 << <a href='21.寫入文件.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">

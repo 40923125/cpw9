@@ -133,12 +133,89 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">為何需要以子模組的設計 << <a href='為何需要以子模組的設計.html'>Previous</a> <a href='假如 CMSiMDE 不設為子模組.html'>Next</a> >> 假如 CMSiMDE 不設為子模組<br /><h1>兩種不同的 git clone</h1>
-<p>git clone <a href="https://github.com/mdecourse/cmsimde.git">https://github.com/mdecourse/cmsimde.git</a></p>
-<p>表示要將 cmsimde 倉儲的資料 clone 到近端, 針對沒有子模組設置的倉儲可以直接以 git clone 取下倉儲資料</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/cp2020.git">https://github.com/mdecourse/cp2020.git</a></p>
-<p>表示要將 cp2020 倉儲中包含個子模組與可能子模組中的子模組等資料, 全部 clone 到近端.</p>
-<br />為何需要以子模組的設計 << <a href='為何需要以子模組的設計.html'>Previous</a> <a href='假如 CMSiMDE 不設為子模組.html'>Next</a> >> 假如 CMSiMDE 不設為子模組</div>
+    <div id="tipue_search_content">20.元素搜索 << <a href='20.元素搜索.html'>Previous</a> <a href='21.寫入文件.html'>Next</a> >> 21.寫入文件<br /><h1>20.Element Search</h1>
+<h4 id="exercise-20-and-solution"><strong>Exercise 20 (and <a href="https://www.practicepython.org/solution/2014/11/30/20-element-search-solutions.html">Solution</a>)</strong></h4>
+<p>Write a function that takes an ordered list of numbers (a list where the elements are in order from smallest to largest) and another number. The function decides whether or not the given number is inside the list and returns (then prints) an appropriate boolean.</p>
+<p>Extras:</p>
+<ul>
+<li>Use binary search.</li>
+</ul>
+<h4 id="discussion">Discussion</h4>
+<p>Topics:</p>
+<ol>
+<li>Booleans - True and False</li>
+<li>Equality testing</li>
+<li>Binary search</li>
+</ol>
+<h4 id="booleans">Booleans</h4>
+<p>When you are writing programs, there is often a time when you need to make a decision about something based on the truthfulness of something else. Basically, you need to make a decision based on whether something is TRUE or something is FALSE.</p>
+<p>An obvious example is when using conditionals:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">michele_age</span> <span class="o">=</span> <span class="mi">22</span>
+  <span class="n">truth_value</span> <span class="o">=</span> <span class="n">michele_age</span> <span class="o">&gt;</span> <span class="mi">17</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">truth_value</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Michele can see a rated R movie"</span><span class="p">)</span></code></pre>
+</figure>
+<p>(We talked about this idea of conditionals in<span> </span><a href="https://www.practicepython.org/exercise/2014/02/05/02-odd-or-even.html">a previous post</a>.)</p>
+<p>But what is happening behind the scenes is that the statement<span> </span><code class="highlighter-rouge">michele_age &gt; 17</code><span> </span>is being evaluated into a type that is either<span> </span><code class="highlighter-rouge">True</code><span> </span>or<span> </span><code class="highlighter-rouge">False</code>. This is then getting stored inside the variable<span> </span><code class="highlighter-rouge">truth_value</code>, and then the decision is being made inside the conditional.</p>
+<p>Here is another example:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"How old are you? "</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">age</span> <span class="o">&gt;=</span> <span class="mi">17</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated R movie"</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">17</span> <span class="ow">and</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">12</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="s">"can see a rated PG-13 movie"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span> 
+      <span class="k">print</span><span class="p">(</span><span class="s">"can only see rated PG movies"</span><span class="p">)</span></code></pre>
+</figure>
+<p>What the<span> </span><code class="highlighter-rouge">while True</code><span> </span>statement does at the beginning of the code segment is continue asking for an age and printing a response - it never stops. (To stop it, press CTRL-C in a terminal or in the Python shell).</p>
+<p>These types -<span> </span><code class="highlighter-rouge">True</code><span> </span>and<span> </span><code class="highlighter-rouge">False</code><span> </span>are called<span> </span><strong>boolean</strong><span> </span>types or<span> </span><strong>boolean</strong><span> </span>variables. They can only take on two values, either<span> </span><code class="highlighter-rouge">True</code><span> </span>or<span> </span><code class="highlighter-rouge">False</code>.</p>
+<p>For more extensive reading on Python booleans, take a look at<span> </span><a href="http://www.pythonforbeginners.com/basics/boolean">these</a><span> </span><a href="http://learnpythonthehardway.org/book/ex28.html">resources</a>.</p>
+<h4 id="equality-testing-on-strings">Equality testing on strings</h4>
+<p>Scenarios come up where you need to test if things are equal to each other - numbers or strings or something else. We covered this idea in<span> </span><a href="https://www.practicepython.org/exercise/2014/02/05/02-odd-or-even.html">a previous post</a>, but it is worth returning to again, this time for strings.</p>
+<p>Good thing it’s easy!</p>
+<p>Remember, comparing numbers for equality is done with an<span> </span><code class="highlighter-rouge">==</code><span> </span>sign, like so:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">age</span> <span class="o">=</span> <span class="mi">21</span>
+  <span class="k">if</span> <span class="n">age</span> <span class="o">==</span> <span class="mi">21</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You are 21!"</span><span class="p">)</span>
+  <span class="k">elif</span> <span class="n">age</span> <span class="o">&gt;</span> <span class="mi">21</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You're old."</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Young one!"</span><span class="p">)</span></code></pre>
+</figure>
+<p>Turns out, comparing strings is equally (hehe..) simple, using a<span> </span><code class="highlighter-rouge">==</code><span> </span>to check for equality and<span> </span><code class="highlighter-rouge">!=</code><span> </span>to check for inequality.</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">password</span> <span class="o">=</span> <span class="s">"unsafepassword"</span>
+  <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s">"unsafepassword"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"You may enter."</span><span class="p">)</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Try again!"</span><span class="p">)</span></code></pre>
+</figure>
+<p>Or, a more practical password-checking piece of code:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">real_password</span> <span class="o">=</span> <span class="s">"unsafepassword"</span>
+  <span class="n">user_password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the password: "</span><span class="p">)</span>
+  <span class="k">while</span> <span class="n">user_password</span> <span class="o">!=</span> <span class="n">real_password</span><span class="p">:</span>
+    <span class="n">user_password</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s">"Enter the password: "</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span><span class="s">"You may enter!"</span><span class="p">)</span></code></pre>
+</figure>
+<h4 id="binary-search">Binary search</h4>
+<p>There are a number of ways to search for elements in a list, and there is no one correct way to do so. The point of this exercise is to get you thinking about possible ways to search for elements in the list, in an entire sequence of exercises about lists, searching, and sorting. This exercise might seem silly and easy at first, but the more you dive into this topic, the more difficult it becomes.</p>
+<p>The word “binary” means there are two choices (in computers, often this is 0 or 1, but it really means any choice between two things). “Search” is to look for something. So the main idea behind binary search is to look for something in a way that gives you a decision tree for where to look, containing two choices. Let me give you an example:</p>
+<p>Let’s take the list<span> </span><code class="highlighter-rouge">a = [1, 3, 5, 30, 42, 43, 500]</code>. It is an “ordered list”, or a list where the elements in the list go from smaller to larger. Let’s say we want to know whether the element<span> </span><code class="highlighter-rouge">9</code><span> </span>is in the list or not. Here is what we do:</p>
+<ul>
+<li>Look at the middle element in the list - it is ‘30’. * ‘9 &lt; 30’, so let us ignore the elements to the right of ‘30’.</li>
+<li>The new list we are looking at is now<span> </span><code class="highlighter-rouge">[1, 3, 5]</code>.</li>
+<li>Look at the middle element in this new list - it is<span> </span><code class="highlighter-rouge">3</code>.</li>
+<li>‘9 &gt; 3’, so ignore the elements to the left of<span> </span><code class="highlighter-rouge">3</code>.</li>
+<li>The new list we are looking at is<span> </span><code class="highlighter-rouge">[5]</code>.</li>
+<li>The list has one element and it is not<span> </span><code class="highlighter-rouge">9</code>.</li>
+<li><code class="highlighter-rouge">9</code><span> </span>is not in the list.</li>
+</ul>
+<p>What the example shows is that in an ordered list, knowing how the element you are looking for compares to another element in the list splits the list in two - one half where the element can be, and one where it definitely cannot be. In the case where our list contains millions of elements, knowing that we can cut the “search space” in half is a great increase in efficiency.</p>
+<br />20.元素搜索 << <a href='20.元素搜索.html'>Previous</a> <a href='21.寫入文件.html'>Next</a> >> 21.寫入文件</div>
         
     <!-- footer -->
       <div class="container">
