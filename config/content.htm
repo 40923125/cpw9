@@ -1259,4 +1259,151 @@ variables:
 <li>You can write<span> </span><em>any</em><span> </span>kind of object to any kind of file in Python, as long as you specify the correct format. The simplest thing to do is to write strings to a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file. But remember - you have to convert numbers or objects into strings before you write them to a file. In a later exercise, we’ll talk about writing to other formats.</li>
 </ol>
 <p>The best way to remember the caveats is to explore them yourself, so have at it!</p>
-<br/>22.<span>從文件讀取</span></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+<h2>22.從文件讀取</h2>
+<h4 id="exercise-22-and-solution"><span>練習22（和</span><a href="https://www.practicepython.org/solution/2014/12/14/22-read-from-file-solutions.html"><span>解決方案</span></a><span>）</span></h4>
+<p><span><span>給定一個</span></span><code class="highlighter-rouge">.txt</code><span><span>包含一堆名稱列表的文件，請計算該文件中每個名稱的數量，然後將結果打印到屏幕上。</span></span><code class="highlighter-rouge">.txt</code><span><span>如果您想</span></span><a href="http://www.practicepython.org/assets/nameslist.txt"><span><span>使用它</span></span></a><span><span>，</span><span>我有一個</span><span>文件供您</span><a href="http://www.practicepython.org/assets/nameslist.txt"><span>使用</span></a><span>！</span></span></p>
+<p><span><span>額外：</span></span></p>
+<ul>
+<li><span><span>不要使用</span></span><code class="highlighter-rouge">.txt</code><span><span>上面</span><span>的</span><span>文件（或者，如果您想挑戰，也可以使用</span></span><a href="http://www.practicepython.org/assets/Training_01.txt"><span><span>該</span></span><code class="highlighter-rouge">.txt</code><span><span>文件</span></span></a><span><span>），請使用</span><a href="http://www.practicepython.org/assets/Training_01.txt"><span>此</span></a><a href="http://www.practicepython.org/assets/Training_01.txt"><span>文件</span></a><span>，併計算每個圖像的每個“類別”有多少個。</span><span>該文本文件實際上是與</span></span><a href="http://sundatabase.mit.edu/"><span><span>SUN數據庫</span></span></a><span><span>場景識別數據庫</span><span>相對應的文件的列表</span><span>，並且列出了圖像的文件目錄層次結構。</span><span>查看文件的第一行或第二行後，將很清楚哪個部分代表場景類別。</span><span>為此，您將需要記住一些有關Python 3中的字符串解析的信息。我</span></span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html"><span><span>在本文中對此進行</span></span></a><span><span>了一些討論</span><span>。</span></span></li>
+</ul>
+<h4 id="discussion"><span><span>討論區</span></span></h4>
+<p><span><span>主題：</span></span></p>
+<ol>
+<li><span><span>讀取文件</span></span></li>
+<li><span><span>辭典</span></span></li>
+</ol>
+<h4 id="reading-a-file"><span><span>讀取文件</span></span></h4>
+<p><span><span>正如</span></span><a href="https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html"><span><span>我之前在練習21中所討論的</span></span></a><span><span>，讀取文件與寫入文件非常相似</span><span>。</span><span>但是，最好的來源始終是</span></span><a href="https://docs.python.org/3.3/tutorial/inputoutput.html#reading-and-writing-files"><span><span>官方的Python 3.3文檔</span></span></a><span><span>。</span></span></p>
+<p><span><span>簡單來說，讀取文件需要兩個步驟：</span></span></p>
+<ol>
+<li><span><span>打開文件進行讀取</span></span></li>
+<li><span><span>讀！</span></span></li>
+</ol>
+<p><span><span>打開文件進行讀取與打開文件相同，只是使用一個不同的標誌：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+    <span class="n">all_text</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code></pre>
+</figure>
+<p><span><span>請注意該</span></span><code class="highlighter-rouge">'r'</code><span><span>標誌代表“已讀”。</span><span>上面的代碼示例</span></span><code class="highlighter-rouge">open_file</code><span><span>一次</span><span>將全部讀取</span><span>到了</span></span><code class="highlighter-rouge">all_text</code><span><span>變量中。</span><span>但是，這意味著我們現在有了一個長字符串</span></span><code class="highlighter-rouge">all_text</code><span><span>，然後可以使用所需的任何字符串方法在Python中對其進行操作。</span></span></p>
+<p><span><span>從文件讀取數據的另一種方法是逐行：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+  	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+  	<span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+    	<span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code></pre>
+</figure>
+<p><span><span>代替</span></span><code class="highlighter-rouge">print(line)</code><span><span>，您可以想像對文本行進行任何操作...如果將其保存到變量中，則可以有一個字符串，然後可以使用諸如</span></span><code class="highlighter-rouge">.strip()</code><span><span>或</span></span><code class="highlighter-rouge">.split()</code><span><span>with之</span><span>類的東西</span><span>。</span></span></p>
+<h4 id="dictionaries"><span><span>辭典</span></span></h4>
+<p><span><span>字典是Python將兩種數據關聯在一起的方式。</span><span>在</span></span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries"><span><span>官方文件</span></span></a><span><span>說明了一切。</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Adama'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Starbuck'</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s">'Apollo'</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s">'Athena'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s">'Agathon'</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span></code></pre>
+</figure>
+<p><span><span>字符串（或</span></span><code class="highlighter-rouge">:</code><span><span>符號</span><span>左側發生的任何事情</span><span>）稱為</span></span><code class="highlighter-rouge">keys</code><span><span>。</span><span>當我想訪問</span></span><code class="highlighter-rouge">values</code><span><span>（</span></span><code class="highlighter-rouge">:</code><span><span>符號</span><span>右邊的東西</span><span>）時，我需要向字典查詢與該鍵關聯的值：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span></code></pre>
+</figure>
+<p><span><span>然後，您可以修改分數並將其保存回字典：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span>
+  <span class="n">adama_score</span> <span class="o">+=</span> <span class="mi">100</span>	<span class="o">%</span> <span class="n">adama_score</span> <span class="ow">is</span> <span class="n">now</span> <span class="mf">200.</span> <span class="n">This</span> <span class="n">doesn</span><span class="s">'t change the dictionary value</span><span class="err">
+</span><span class="s">  student_scores['</span><span class="n">Adama</span><span class="s">'] = adama_score		</span><span class="si">% </span><span class="s">the score in the dictionary is now updated</span></code></pre>
+</figure>
+<p><span><span>我不能向字典詢問與值關聯的鍵，但是我可以獲得所有鍵的列表，所有值都相同：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">all_scores</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+  <span class="n">all_names</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></code></pre>
+</figure>
+<p><span><span>我可以使用</span></span><code class="highlighter-rouge">in</code><span><span>關鍵字（就像在列表中一樣），</span></span><code class="highlighter-rouge">dictionary comprehensions</code><span><span>像列表理解一樣（這些很酷，請看</span></span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries"><span><span>一下有關這些</span></span></a><span><span>的</span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries"><span>官方知識</span></a><span>），然後遍歷字典中的元素（語法略有不同） 。</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+  	<span class="k">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>而這種打印出對項和值樣子的：</span></span><code class="highlighter-rouge">(Adama, 100)</code><span><span>等</span></span></p>
+<p><span><span>由於字典沒有順序，因此遍歷字典不能保證鍵/值對以特定順序出現。</span><span>所以要小心。</span></span></p>
+<h2>22.Read From File</h2>
+<h4 id="exercise-22-and-solution">Exercise 22 (and<span> </span><a href="https://www.practicepython.org/solution/2014/12/14/22-read-from-file-solutions.html">Solution</a>)</h4>
+<p>Given a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file that has a list of a bunch of names, count how many of each name there are in the file, and print out the results to the screen. I have a<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file for you, if you want to<span> </span><a href="http://www.practicepython.org/assets/nameslist.txt">use it</a>!</p>
+<p>Extra:</p>
+<ul>
+<li>Instead of using the<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file from above (or instead of, if you want the challenge), take<span> </span><a href="http://www.practicepython.org/assets/Training_01.txt">this<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file</a>, and count how many of each “category” of each image there are. This text file is actually a list of files corresponding to the<span> </span><a href="http://sundatabase.mit.edu/">SUN database</a><span> </span>scene recognition database, and lists the file directory hierarchy for the images. Once you take a look at the first line or two of the file, it will be clear which part represents the scene category. To do this, you’re going to have to remember a bit about string parsing in Python 3. I talked a little bit about it<span> </span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html">in this post</a>.</li>
+</ul>
+<h4 id="discussion">Discussion</h4>
+<p>Topics:</p>
+<ol>
+<li>Reading a file</li>
+<li>Dictionaries</li>
+</ol>
+<h4 id="reading-a-file">Reading a File</h4>
+<p>Reading a file is very analogous to writing a file, as<span> </span><a href="https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html">I discussed before in Exercise 21</a>. But, the best source is always the<span> </span><a href="https://docs.python.org/3.3/tutorial/inputoutput.html#reading-and-writing-files">official Python 3.3 documentation</a>.</p>
+<p>Simply, reading to a file takes two steps:</p>
+<ol>
+<li>Opening the file for reading</li>
+<li>Read!</li>
+</ol>
+<p>Opening a file for reading is the same as opening for writing, just using a different flag:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+    <span class="n">all_text</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span></code></pre>
+</figure>
+<p>Note how the<span> </span><code class="highlighter-rouge">'r'</code><span> </span>flag stands for “read”. The code sample from above reads the entire<span> </span><code class="highlighter-rouge">open_file</code><span> </span>all at once into the<span> </span><code class="highlighter-rouge">all_text</code><span> </span>variable. But, this means that we now have a long string in<span> </span><code class="highlighter-rouge">all_text</code><span> </span>that can then be manipulated in Python using any string methods you want.</p>
+<p>Another way of reading data from the file is line by line:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'file_to_read.txt'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="n">open_file</span><span class="p">:</span>
+  	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+  	<span class="k">while</span> <span class="n">line</span><span class="p">:</span>
+    	<span class="k">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    	<span class="n">line</span> <span class="o">=</span> <span class="n">open_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span></code></pre>
+</figure>
+<p>Instead of<span> </span><code class="highlighter-rouge">print(line)</code>, you can imagine doing anything you want to the line of text… If you save it to a variable, you have a string that you can then use something like<span> </span><code class="highlighter-rouge">.strip()</code><span> </span>or<span> </span><code class="highlighter-rouge">.split()</code><span> </span>with.</p>
+<h4 id="dictionaries">Dictionaries</h4>
+<p>Dictionaries are Python’s way of associating two pieces of data together. The<span> </span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official documentation</a><span> </span>says it all.</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">student_scores</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Adama'</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="s">'Starbuck'</span><span class="p">:</span> <span class="mi">75</span><span class="p">,</span> <span class="s">'Apollo'</span><span class="p">:</span> <span class="mi">80</span><span class="p">,</span> <span class="s">'Athena'</span><span class="p">:</span> <span class="mi">85</span><span class="p">,</span> <span class="s">'Agathon'</span><span class="p">:</span> <span class="mi">90</span><span class="p">}</span></code></pre>
+</figure>
+<p>The strings (or whatever happens to the left of the<span> </span><code class="highlighter-rouge">:</code><span> </span>sign), are called<span> </span><code class="highlighter-rouge">keys</code>. When I want to access the<span> </span><code class="highlighter-rouge">values</code><span> </span>(the things to the right of the<span> </span><code class="highlighter-rouge">:</code><span> </span>sign), I need to ask the dictionary for the value associated with the key:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span></code></pre>
+</figure>
+<p>You can then modify the score and save it back to the dictionary:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">adama_score</span> <span class="o">=</span> <span class="n">student_scores</span><span class="p">[</span><span class="s">'Adama'</span><span class="p">]</span>
+  <span class="n">adama_score</span> <span class="o">+=</span> <span class="mi">100</span>	<span class="o">%</span> <span class="n">adama_score</span> <span class="ow">is</span> <span class="n">now</span> <span class="mf">200.</span> <span class="n">This</span> <span class="n">doesn</span><span class="s">'t change the dictionary value</span><span class="err">
+</span><span class="s">  student_scores['</span><span class="n">Adama</span><span class="s">'] = adama_score		</span><span class="si">% </span><span class="s">the score in the dictionary is now updated</span></code></pre>
+</figure>
+<p>I can’t ask the dictionary for the key associated with a value, but I can get a list of all the keys, and the same for all the values:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">all_scores</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+  <span class="n">all_names</span> <span class="o">=</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">values</span><span class="p">()</span></code></pre>
+</figure>
+<p>I can use the<span> </span><code class="highlighter-rouge">in</code><span> </span>keyword (just like in lists), do<span> </span><code class="highlighter-rouge">dictionary comprehensions</code><span> </span>like list comprehensions (these are cool, take a look at the<span> </span><a href="https://docs.python.org/3.3/tutorial/datastructures.html#dictionaries">official bit about these</a>), and iterate over the elements in the dictionary (the syntax is just a little bit different).</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">student_scores</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+  	<span class="k">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span></code></pre>
+</figure>
+<p>And this prints out pairs of keys and values that look like:<span> </span><code class="highlighter-rouge">(Adama, 100)</code>, etc.</p>
+<p>Because dictionaries are not ordered, looping through them does not guarantee the key / value pairs coming out in a particular order. So be careful.</p>
+<h2>23.文件重疊</h2>
+<h4 id="exercise-23-and-solution"><span>練習23（和</span><a href="https://www.practicepython.org/solution/2014/12/25/23-file-overlap-solutions.html"><span>解決方案</span></a><span>）</span></h4>
+<p><span><span>給定</span></span><code class="highlighter-rouge">.txt</code><span><span>其中有數字列表的</span><span>兩個</span><span>文件，請查找重疊的數字。</span></span><a href="http://www.practicepython.org/assets/primenumbers.txt"><span><span>一個</span></span><code class="highlighter-rouge">.txt</code><span><span>文件</span></span></a><span><span>包含所有小於1000的質數的列表，</span></span><a href="http://www.practicepython.org/assets/happynumbers.txt"><span><span>另一個</span></span><code class="highlighter-rouge">.txt</code><span><span>文件</span></span></a><span><span>包含不超過1000的快樂數的列表。</span></span></p>
+<p><span><span>（如果您忘記了，質數是不能除以任何其他數字的數字。是的，快樂數是數學中的真品-您可以</span></span><a href="http://en.wikipedia.org/wiki/Happy_number"><span><span>在Wikipedia上查找它</span></span></a><span><span>。用一個例子可以更容易地解釋這一點，我將在下面進行說明。）</span></span></p>
+<h4 id="discussion"><span><span>討論區</span></span></h4>
+<p><span><span>您需要將我之前在此博客上討論過的事情的一些想法融合在一起，因此，如果您需要在這些主題中的任何一個方面進行複習，那麼現在就有機會！</span><span>當然，有許多方法可以進行此練習，因此這些只是建議。</span></span></p>
+<p><span><span>主題：</span></span></p>
+<ol>
+<li><span><span>在</span><a href="https://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html"><span>練習21中</span></a><span>讀取文件</span></span><a href="https://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html"><span></span></a></li>
+<li><span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>練習1中的</span></a><span>數字類型和從字符串轉換為整數</span></span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span></span></a><span><span></span></span></li>
+<li><span></span><a href="https://www.practicepython.org/exercise/2014/02/15/03-list-less-than-ten.html"><span><span>練習3</span></span></a><span><span>和</span><a href="https://www.practicepython.org/exercise/2014/03/05/05-list-overlap.html"><span>5中的</span></a><span>清單</span></span><span><span></span></span></li>
+</ol>
+<h2>23.File Overlap</h2>
+<h4 id="exercise-23-and-solution">Exercise 23 (and<span> </span><a href="https://www.practicepython.org/solution/2014/12/25/23-file-overlap-solutions.html">Solution</a>)</h4>
+<p>Given two<span> </span><code class="highlighter-rouge">.txt</code><span> </span>files that have lists of numbers in them, find the numbers that are overlapping.<span> </span><a href="http://www.practicepython.org/assets/primenumbers.txt">One<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file</a><span> </span>has a list of all prime numbers under 1000, and<span> </span><a href="http://www.practicepython.org/assets/happynumbers.txt">the other<span> </span><code class="highlighter-rouge">.txt</code><span> </span>file</a><span> </span>has a list of happy numbers up to 1000.</p>
+<p>(If you forgot, prime numbers are numbers that can’t be divided by any other number. And yes, happy numbers are a real thing in mathematics - you can<span> </span><a href="http://en.wikipedia.org/wiki/Happy_number">look it up on Wikipedia</a>. The explanation is easier with an example, which I will describe below.)</p>
+<h4 id="discussion">Discussion</h4>
+<p>You’ll need to stitch together a few ideas of things I’ve previously talked about on this blog, so if you need a refresher in any of these topics, now is your chance! Of course, there are any number of ways to do this exercise, so these are only suggestions.</p>
+<p>Topics:</p>
+<ol>
+<li>Reading a file, in<span> </span><a href="https://www.practicepython.org/exercise/2014/12/06/22-read-from-file.html">Exercise 21</a></li>
+<li>Number types and converting to integers from strings, in<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html">Exercise 1</a></li>
+<li>Lists, in<span> </span><a href="https://www.practicepython.org/exercise/2014/02/15/03-list-less-than-ten.html">Exercise 3</a><span> </span>and<span> </span><a href="https://www.practicepython.org/exercise/2014/03/05/05-list-overlap.html">Exercise 5</a></li>
+</ol></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
